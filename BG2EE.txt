@@ -3,7 +3,8 @@ stratagems 1000 5900 6000 6010 6030 6040
 spell_rev *
 Faiths_and_Powers *
 TomeAndBlood *
-iwdification  *
+iwdification *
+stratagems 1500 1510
 wildmage *
 iwdification 60
 hammers *
