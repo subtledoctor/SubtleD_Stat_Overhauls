@@ -1,0 +1,33 @@
+jimfix 0 1 100
+stratagems 1000 5900 6000 6010 6030 6040
+spell_rev *
+Faiths_and_Powers *
+TomeAndBlood *
+iwdification  *
+wildmage *
+iwdification 60
+hammers *
+UnofficialItemPack *
+item_rev *
+Divine_Remix *
+song_and_silence *
+RR 0 1 2 3 4 5 6 7 8
+A7-GolemConstruction *
+A7-ChaosSorcerer *
+might_and_guile *
+IHateUndead *
+willowisp *
+cdtweaks *
+Divine_Remix 1000
+AnimalCompanions *
+shadowadept *
+sword_and_fist *
+refinements *
+scales_of_balance *
+stratagems *
+jimfix 2 3 4 5 400
+RR 9 10 11 12 999
+atweaks *
+scales_of_balance 180
+klatu *
+jimfix 201 202 203 204 205 300
