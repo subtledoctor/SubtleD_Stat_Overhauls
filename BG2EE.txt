@@ -34,7 +34,7 @@ RR *
 atweaks *
 scales_of_balance 180
 klatu *
-jimfix 201 202 203 204 205 300
+jimfix * # it will install remaing 201 202 203 204 205 300 components
 
 #Portiats
 ppe *
