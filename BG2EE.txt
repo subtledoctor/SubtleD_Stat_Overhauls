@@ -1,3 +1,6 @@
+#UI-Overwrite
+DragonspearUI++ *
+
 jimfix 0 1 100
 stratagems 1000 5900 6000 6010 6030 6040
 spell_rev *
@@ -27,8 +30,15 @@ refinements *
 scales_of_balance *
 stratagems *
 jimfix 2 3 4 5 400
-RR 9 10 11 12 999
+RR *
 atweaks *
 scales_of_balance 180
 klatu *
 jimfix 201 202 203 204 205 300
+
+#Portiats
+ppe *
+thepicturestandard *
+
+#UI-Patching
+EEUITweaks *
