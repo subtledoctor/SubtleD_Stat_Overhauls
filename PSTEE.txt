@@ -1,0 +1,11 @@
+PST-UB-Reloaded *
+detect_traps_for_pstee *
+k9Quicksave *
+A7-BanterAccelerator *
+PowerOfBelief *
+bagsoftorment *
+cdtweaks *
+JournalPortraitConversations *
+A7-LevelUpTweaks *
+HiddenGameplayOptions *
+A7-ResizeableCombatLog *
