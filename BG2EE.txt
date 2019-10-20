@@ -4,8 +4,6 @@ DragonspearUI++ *
 jimfix 0 1 100
 stratagems 1000 5900 6000 6010 6030 6040
 spell_rev *
-Faiths_and_Powers *
-TomeAndBlood *
 iwdification *
 stratagems 1500 1510
 wildmage *
@@ -16,6 +14,8 @@ item_rev *
 Divine_Remix *
 song_and_silence *
 RR 0 1 2 3 4 5 6 7 8
+Faiths_and_Powers *
+TomeAndBlood *
 A7-GolemConstruction *
 A7-ChaosSorcerer *
 might_and_guile *
