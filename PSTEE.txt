@@ -1,8 +1,0 @@
-PST-UB-Reloaded *
-A7-BanterAccelerator *
-PowerOfBelief *
-bagsoftorment *
-cdtweaks *
-A7-LevelUpTweaks *
-HiddenGameplayOptions *
-A7-ResizeableCombatLog *

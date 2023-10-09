@@ -1,0 +1,380 @@
+BACKUP ~weidu_external/backup/SubtleD_Stat_Overhauls~
+AUTHOR ~SubtleD~
+
+VERSION ~v1.0~
+
+ALWAYS
+
+// -->	INCLUDE ~Combat_Skill_Proficiencies/lib/joinable_npcs.tpa~
+
+	INCLUDE ~Combat_Skill_Proficiencies/lib/misc_functions.tpa~
+
+// -->	INCLUDE ~Combat_Skill_Proficiencies/lib/add_spell_header.tpa~
+
+	INCLUDE ~Combat_Skill_Proficiencies/lib/fl#add_kit_ee.tpa~
+
+	LAF fix_kitlist_missing_ids END
+
+// joinable NPC issues for tutu/bgt/eet:
+  ACTION_IF GAME_IS ~bgee~ BEGIN
+    OUTER_SPRINT tutu_var ~~
+    OUTER_SPRINT imoen6_var ~imoen6~
+    OUTER_SPRINT quayle_var ~quayle~
+    OUTER_SPRINT viconi6_var ~viconi6~
+    OUTER_SPRINT xan_var ~xan~
+    OUTER_SPRINT xzar_var ~xzar~
+  END ELSE ACTION_IF GAME_IS ~eet~ BEGIN
+    OUTER_SPRINT tutu_var ~~
+    OUTER_SPRINT imoen6_var ~imoen6_~
+    OUTER_SPRINT quayle_var ~quayle_~
+    OUTER_SPRINT viconi6_var ~viconi6_~
+    OUTER_SPRINT xan_var ~xan_~
+    OUTER_SPRINT xzar_var ~xzar_~
+  END ELSE ACTION_IF GAME_IS ~bgt~ BEGIN
+    OUTER_SPRINT tutu_var ~~
+    OUTER_SPRINT imoen6_var ~imoen61~
+    OUTER_SPRINT quayle_var ~bgquayle~
+    OUTER_SPRINT viconi6_var ~viconi61~
+    OUTER_SPRINT xan_var ~bgxan~
+    OUTER_SPRINT xzar_var ~bgxzar~
+  END ELSE ACTION_IF GAME_IS ~tutu tutu_totsc~ BEGIN
+    OUTER_SPRINT tutu_var ~_~
+    OUTER_SPRINT imoen6_var ~imoen6~
+    OUTER_SPRINT quayle_var ~quayle~
+    OUTER_SPRINT viconi6_var ~viconi6~
+    OUTER_SPRINT xan_var ~xan~
+    OUTER_SPRINT xzar_var ~xzar~
+  END
+
+END
+
+// ASK_EVERY_COMPONENT
+
+LANGUAGE
+  ~English~
+  ~english~
+  ~SubtleD_Stat_Overhauls/lang/en_US/setup.tra~
+LANGUAGE
+  ~Polski (Translation by etamin)~
+  ~polish~
+  ~SubtleD_Stat_Overhauls/lang/en_US/setup.tra~
+  ~SubtleD_Stat_Overhauls/lang/pl_PL/setup.tra~
+
+
+//__________________________________________________________________________________
+//__________________________________________________________________________________
+//
+//							STAT BONUS CHANGES
+//__________________________________________________________________________________
+//__________________________________________________________________________________
+
+BEGIN @100 // basic stat bonus overhaul
+DESIGNATED 100
+LABEL ~D5_REVISED_ABILITY_SCORES~
+
+INCLUDE ~%MOD_FOLDER%/lib/semi_spontaneous.tpa~
+
+INCLUDE ~SubtleD_Stat_Overhauls/components/revised_stats.tpa~
+
+LAF revise_stat_bonuses END
+
+//__________________________________________________________________________________
+
+BEGIN @110 // stat-based bonus memorization slots - affects spont priests too
+DESIGNATED 110
+LABEL ~D5_ABILITY_SCORE_SPELL_SLOTS~
+
+INCLUDE ~%MOD_FOLDER%/lib/semi_stats.tpa~
+INCLUDE ~%MOD_FOLDER%/lib/semi_spontaneous.tpa~
+
+INCLUDE ~%MOD_FOLDER%/components/stat_bonus_spells.tpa~
+
+LAF ability_bonus_spells END
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~d5fpspt.spl~) BEGIN
+  OUTER_SET 5e_wis_bonus_casting = 0
+  LAM semi_wis_slots
+END
+
+//__________________________________________________________________________________
+
+BEGIN @121 // stat-based bonus memorization slots AND casting slots for 5E casters
+DESIGNATED 121
+LABEL ~D5_SBO_5E_MEM_PLUS_CASTING_SLOTS~
+//REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~d5zzini.spl~) @6
+//REQUIRE_PREDICATE (MOD_IS_INSTALLED ~SubtleD_Stat_Overhauls.tp2~ ~110~) @1
+SUBCOMPONENT @120
+
+ACTION_IF (FILE_EXISTS_IN_GAME ~d5zzini.spl~) AND (MOD_IS_INSTALLED ~SubtleD_Stat_Overhauls.tp2~ ~110~) BEGIN
+
+ INCLUDE ~%MOD_FOLDER%/lib/semi_stats.tpa~
+ INCLUDE ~%MOD_FOLDER%/lib/semi_spontaneous.tpa~
+
+ INCLUDE ~%MOD_FOLDER%/components/stat_bonus_spells.tpa~
+
+ ACTION_IF (FILE_EXISTS_IN_GAME ~d5__5E_casting_arcane.d5~) BEGIN
+  OUTER_SET 5e_int_bonus_memorization = 1
+  LAM semi_int_slots
+ END
+
+ ACTION_IF (FILE_EXISTS_IN_GAME ~d5__5E_casting_divine.d5~) BEGIN
+  OUTER_SET 5e_wis_bonus_casting = 1
+  LAM semi_wis_slots  
+ END
+
+END
+//__________________________________________________________________________________
+
+BEGIN @122 // stat-based memorization slots for Vancian and ONLY casting slots for 5E
+DESIGNATED 122
+LABEL ~D5_SBO_5E_CASTING_SLOTS_ONLY_~
+SUBCOMPONENT @120
+
+INCLUDE ~%MOD_FOLDER%/lib/semi_stats.tpa~
+INCLUDE ~%MOD_FOLDER%/lib/semi_sorcerer.tpa~
+INCLUDE ~%MOD_FOLDER%/lib/semi_spontaneous.tpa~
+
+ACTION_IF (MOD_IS_INSTALLED ~SubtleD_Stat_Overhauls.tp2~ ~110~) BEGIN
+  ACTION_IF (FILE_EXISTS_IN_GAME ~d5zzini.spl~) BEGIN
+    INCLUDE ~%MOD_FOLDER%/components/stat_bonus_spells.tpa~
+    ACTION_IF (FILE_EXISTS_IN_GAME ~d5__5E_casting_arcane.d5~) BEGIN
+      OUTER_SET 5e_int_bonus_memorization = 0
+      LAM semi_int_slots
+    END
+    ACTION_IF (FILE_EXISTS_IN_GAME ~d5__5E_casting_divine.d5~) BEGIN
+      OUTER_SET 5e_wis_bonus_casting = 1
+      LAM semi_wis_slots
+      LAF 5e_no_priest_mem_bonus END
+    END
+  END
+END
+
+ACTION_IF !(MOD_IS_INSTALLED ~SubtleD_Stat_Overhauls.tp2~ ~110~) BEGIN
+  ACTION_IF (FILE_EXISTS_IN_GAME ~d5zzini.spl~) BEGIN
+    ACTION_IF (FILE_EXISTS_IN_GAME ~d5__5E_casting_arcane.d5~) BEGIN
+      OUTER_SET 5e_int_bonus_memorization = 0
+      LAM semi_int_slots
+    END
+    ACTION_IF (FILE_EXISTS_IN_GAME ~d5__5E_casting_divine.d5~) BEGIN
+      OUTER_SET 5e_wis_bonus_casting = 1
+      LAM semi_wis_slots
+      COPY ~scales_of_balance/stats/mxsplwis_0.2da~ ~override/mxsplwis.2da~
+    END
+  END
+END
+//__________________________________________________________________________________
+
+BEGIN @130 // strength penalty for 1-handed weapons
+DESIGNATED 130
+LABEL ~D5_1_HAND_STR_PENALTY~
+
+INCLUDE ~%MOD_FOLDER%/components/2h_strength.tpa~
+
+LAF 2hand_weapon_strength END
+//__________________________________________________________________________________
+
+BEGIN @140 // add concentration checks
+DESIGNATED 140
+LABEL ~D5_CONCENTRATION_CHECKS~
+REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @8
+DEPRECATED @6
+
+INCLUDE ~%MOD_FOLDER%/components/concentration.tpa~
+
+LAF enable_concentration_checks END
+//__________________________________________________________________________________
+
+BEGIN @151 // constitution/hit dice rebalance - normal
+DESIGNATED 151
+LABEL ~D5_REVISED_HD~
+SUBCOMPONENT @150
+
+INCLUDE ~%MOD_FOLDER%/components/revised_HD.tpa~
+
+LAF revise_hit_dice END
+//__________________________________________________________________________________
+
+BEGIN @152 // constitution/hit dice rebalance - hardcore
+DESIGNATED 152
+LABEL ~D5_HARDCORE_HD~
+SUBCOMPONENT @150
+
+INCLUDE ~%MOD_FOLDER%/components/revised_HD_hardcore.tpa~
+
+LAF revise_hit_dice_hardcore END
+//__________________________________________________________________________________
+
+BEGIN @153 // constitution/hit dice rebalance - reduced
+DESIGNATED 153
+LABEL ~D5_REDUCED_HD~
+SUBCOMPONENT @150
+
+INCLUDE ~%MOD_FOLDER%/components/revised_HD_reduced.tpa~
+
+LAF revise_hit_dice_reduced END
+//__________________________________________________________________________________
+
+
+
+//__________________________________________________________________________________
+//__________________________________________________________________________________
+//
+//								XP OVERHAULS
+//__________________________________________________________________________________
+//__________________________________________________________________________________
+
+BEGIN @200 // XP table rebalance
+DESIGNATED 200
+LABEL ~D5_UNIFORM_XP_TABLES~
+
+INCLUDE ~%MOD_FOLDER%/components/XP_tables.tpa~
+
+LAF revise_xp_tables END
+//__________________________________________________________________________________
+
+BEGIN @211 // changes to creature XP rewards - 1/8
+DESIGNATED 211
+LABEL ~D5_EIGHTH_CREATURE_XP~
+SUBCOMPONENT @210
+
+INCLUDE ~%MOD_FOLDER%/components/NMX.tpa~
+
+LAF revise_enemy_xp INT_VAR xp_divisor = 8 END
+//__________________________________________________________________________________
+
+BEGIN @212 // changes to creature XP rewards - 1/4
+DESIGNATED 212
+LABEL ~D5_QUARTER_CREATURE_XP~
+SUBCOMPONENT @210
+
+INCLUDE ~%MOD_FOLDER%/components/NMX.tpa~
+
+LAF revise_enemy_xp INT_VAR xp_divisor = 4 END
+//__________________________________________________________________________________
+
+BEGIN @213 // changes to creature XP rewards - 1/2
+DESIGNATED 213
+LABEL ~D5_HALF_CREATURE_XP~
+SUBCOMPONENT @210
+
+INCLUDE ~%MOD_FOLDER%/components/NMX.tpa~
+
+LAF revise_enemy_xp INT_VAR xp_divisor = 2 END
+//__________________________________________________________________________________
+
+BEGIN @221 // SoD starting XP 65K
+DESIGNATED 221
+LABEL ~D5_START_SOD_65K~
+SUBCOMPONENT @220
+//REQUIRE_PREDICATE (GAME_INCLUDES ~sod~) @1
+REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~sodstrta.2da~) @1
+
+INCLUDE ~%MOD_FOLDER%/components/starting_xp.tpa~
+
+LAF revise_starting_xp INT_VAR start_value = 65000 STR_VAR game_start = ~sodstrta~ END
+//__________________________________________________________________________________
+
+BEGIN @222 // SoD starting XP 90K
+DESIGNATED 222
+LABEL ~D5_START_SOD_90K~
+SUBCOMPONENT @220
+
+INCLUDE ~%MOD_FOLDER%/components/starting_xp.tpa~
+
+LAF revise_starting_xp INT_VAR start_value = 90000 STR_VAR game_start = ~sodstrta~ END
+//__________________________________________________________________________________
+
+BEGIN @223 // SoD starting XP 125K
+DESIGNATED 223
+LABEL ~D5_START_SOD_125K~
+SUBCOMPONENT @220
+
+INCLUDE ~%MOD_FOLDER%/components/starting_xp.tpa~
+
+LAF revise_starting_xp INT_VAR start_value = 125000 STR_VAR game_start = ~sodstrta~ END
+//__________________________________________________________________________________
+
+BEGIN @224 // SoD starting XP 161K
+DESIGNATED 224
+LABEL ~D5_START_SOD_161K~
+SUBCOMPONENT @220
+
+INCLUDE ~%MOD_FOLDER%/components/starting_xp.tpa~
+
+LAF revise_starting_xp INT_VAR start_value = 161000 STR_VAR game_start = ~sodstrta~ END
+//__________________________________________________________________________________
+
+BEGIN @231 // SoA starting XP 90K
+DESIGNATED 231
+LABEL ~D5_START_SOA_90K~
+SUBCOMPONENT @230
+REQUIRE_PREDICATE !(GAME_IS ~tutu bgee iwdee~) @1
+REQUIRE_PREDICATE (FILE_EXISTS_IN_GAME ~startare.2da~) @1
+
+INCLUDE ~%MOD_FOLDER%/components/starting_xp.tpa~
+
+LAF revise_starting_xp INT_VAR start_value = 90000 STR_VAR game_start = ~startare~ END
+//__________________________________________________________________________________
+
+BEGIN @232 // SoA starting XP 161K
+DESIGNATED 232
+LABEL ~D5_START_SOA_161K~
+SUBCOMPONENT @230
+
+INCLUDE ~%MOD_FOLDER%/components/starting_xp.tpa~
+
+LAF revise_starting_xp INT_VAR start_value = 161000 STR_VAR game_start = ~startare~ END
+//__________________________________________________________________________________
+
+BEGIN @233 // SoA starting XP 240K
+DESIGNATED 233
+LABEL ~D5_START_SOA_240K~
+SUBCOMPONENT @230
+
+INCLUDE ~%MOD_FOLDER%/components/starting_xp.tpa~
+
+LAF revise_starting_xp INT_VAR start_value = 240000 STR_VAR game_start = ~startare~ END
+//__________________________________________________________________________________
+
+BEGIN @234 // SoA starting XP 400K
+DESIGNATED 234
+LABEL ~D5_START_SOA_400K~
+SUBCOMPONENT @230
+
+INCLUDE ~%MOD_FOLDER%/components/starting_xp.tpa~
+
+LAF revise_starting_xp INT_VAR start_value = 400000 STR_VAR game_start = ~startare~ END
+//__________________________________________________________________________________
+
+
+
+//__________________________________________________________________________________
+//__________________________________________________________________________________
+//
+//							MAGIC RESISTANCE OVERHAULS
+//__________________________________________________________________________________
+//__________________________________________________________________________________
+
+BEGIN @251
+LABEL ~D5_REVISED_MR~
+DESIGNATED 251
+SUBCOMPONENT @250
+
+//INCLUDE ~%MOD_FOLDER%/data/mr/mr_list_base.tpa~
+
+INCLUDE ~%MOD_FOLDER%/components/MRO.tpa~
+
+LAF revise_magic_resistance END
+//__________________________________________________________________________________
+
+BEGIN @252
+LABEL ~D5_REDUCED_MR~
+DESIGNATED 252
+SUBCOMPONENT @250
+
+INCLUDE ~%MOD_FOLDER%/components/MRO.tpa~
+
+LAF reduce_magic_resistance END
+//__________________________________________________________________________________
+
+

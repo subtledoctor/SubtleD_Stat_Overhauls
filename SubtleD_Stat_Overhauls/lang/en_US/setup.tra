@@ -1,0 +1,535 @@
+@1   = ~skipping component~
+@2   = ~skipping non-EE component~
+@3   = ~already included~
+@4   = ~skipping tweak components~
+@5   = ~skipping new kit components~
+@6   = ~...~
+@7   = ~skipping item components~
+@8   = ~skipping for IWD~
+@9   = ~kit change~
+//
+//
+@100   = ~Ability Score Overhaul~
+@110   = ~Stat-based Bonus Spell Slots~
+@120   = ~Stat-based Bonus Spells for 5E Casters~
+@121   = ~bonuses for memorization slots AND casting slots~
+@122   = ~bonuses only for casting slots~
+@130   = ~Full Strength for 2-Hand Weapons Only~
+@140   = ~Enable Concentration Checks~
+@150   = ~Hit Dice Overhaul~
+@151   = ~Generous (above-average) hit points~
+@152   = ~Closer to average hit points~
+@153   = ~Reduced hit points~
+@200   = ~Slower, standardized XP Tables~
+@210   = ~No Murder XP~
+@211   = ~kills give 1/8th XP~
+@212   = ~kills give 1/4th XP~
+@213   = ~kills give half XP~
+@220  = ~Choose SoD Starting XP~
+@221  = ~65,000~
+@222  = ~90,000~
+@223  = ~125,000~
+@224  = ~161,000~
+@230  = ~Choose SoA Starting XP~
+@231  = ~90,000~
+@232  = ~161,000~
+@233  = ~240,000~
+@234  = ~400,000~
+@250   = ~MRO - Magic Resistance Overhaul~
+@251   = ~Replace Magic Resistance with Other Effects~
+@252   = ~Reduce Magic Resistance~
+//
+//
+@1611   = ~WIZARD SLAYER: This warrior has been specially trained by <PRO_HISHER> sect to excel in hunting and combating spellcasters of all kinds.
+
+Abilities:
+- Each successful melee hit bestows a 10% cumulative chance of spell failure on the target.
+- +1 bonus to all saving throws at 1st level, and at each 4th level thereafter.
+
+Restrictions:
+- May not use any magic items apart from weapons and armor.~
+@1615   = ~MONK: Monks are warriors who pursue perfection through contemplation as well as action. They are versatile fighters, especially skilled in combat without weapons or armor. Though Monks cannot cast spells, they have a unique magic of their own: they channel a subtle energy, called ki, which allows them to perform amazing feats. The Monk's best known feat is their ability to stun an opponent with an unarmed blow.
+
+CLASS FEATURES:
+
+- May not wear any armor.
+- May only use weapons available to the Thief class (except two-handed).
+- May only become Proficient (+) in any weapon class.
+- May only become Proficient (+) in Single-Weapon Style and may not put slots into any other style.
+- Moves 2 points faster than other characters. Movement rate further improves by 1 every 5 levels.
+- May make 1 unarmed attack per round. An additional 1/2 attack per round is gained every 3 levels. Damage dealt by unarmed attacks increases with level as follows:
+  Level 1-2: 1d6
+  Level 3-5: 1d8
+  Level 6-8: 1d10
+  Level 9-14: 1d12
+  Level 15+: 1d20
+- +1 bonus to all saving throws at 1st level, and at each 4th level thereafter.
+- At level 9, unarmed attacks are treated as a +1 magical weapon and gain a +1 bonus to hit and damage rolls. This enchantment improves to +2 at level 12, +3 at level 15, and +4 at level 25. 
+- Receives a +2 bonus to Saving Throws vs. Spell.
+- Deflect Missiles: +1 bonus to AC vs. missile attacks every 3 levels.
+- Starts with an Armor Class of 9 at 1st level and gains an additional +1 bonus every 2 levels.
+- May use the Stunning Blow ability once per day. Gains one use at level 1 and an additional use every 4 levels thereafter.
+
+STUNNING BLOW: All successful attacks within the next round force the victim to save vs. Spell or be stunned. This special ability automatically modifies normal attacks; no targeting needs to be done.
+
+- 5th level: Becomes immune to all diseases and cannot be slowed or hasted.
+- 7th level: May use the Lay On Hands ability on <PRO_HIMHER>self to heal 2 Hit Points per level.
+- 8th level: Gains a -1 bonus to Speed Factor.
+- 9th level: Gains a +1 bonus to all Saving Throws and becomes immune to charm.
+- 11th level: Becomes immune to poison.
+- 12th level: Gains another -1 bonus to Speed Factor.
+- 13th level: May use the Quivering Palm ability once per day.
+
+QUIVERING PALM: The next successful attack forces the opponent to save vs. Spell or die. This special ability automatically modifies normal attacks; no targeting needs to be done.
+
+- 20th level: Becomes immune to non-magical weapons.
+- Alignment restricted to lawful.
+- Hit Die: d8
+~
+@1618   = ~MONK: Monks are warriors who pursue perfection through contemplation as well as action. They are versatile fighters, especially skilled in combat without weapons or armor. Though Monks cannot cast spells, they have a unique magic of their own: they channel a subtle energy, called ki, which allows them to perform amazing feats. The Monk's best known feat is their ability to stun an opponent with an unarmed blow.
+
+CLASS FEATURES:
+
+- May not wear any armor.
+- May only use weapons available to the Thief class (except two-handed).
+- May only become Proficient (+) in any weapon class.
+- May only become Proficient (+) in Single-Weapon Style and may not put slots into any other style.
+- Moves 2 points faster than other characters. Movement rate further improves by 1 every 5 levels.
+- May make 2 unarmed attacks per round. An additional 1/2 attack per round is gained every 3 levels. Damage dealt by unarmed attacks is of the non-lethal variety, and increases with level as follows:
+  Level 1-2: 1d3
+  Level 3-5: 1d4
+  Level 6-8: 1d5
+  Level 9-11: 1d6
+  Level 12-14: 1d7
+  Level 15-18: 1d8
+  Level 19-24: 1d9
+  Level 25+:  1d10
+- A monk may choose to imbue his fist attacks with his ki energy; when powered up, a monk's fists do crushing damage, act +1 enchanted weapons, and do an additional +1 magic damage.  These bonuses increase at levels 9, 15, and 25.
+- +1 bonus to all saving throws at 1st level, and at each 4th level thereafter.
+- At level 9, unarmed attacks are treated as a +1 magical weapon and gain a +1 bonus to hit and damage rolls. This enchantment improves to +2 at level 12, +3 at level 15, and +4 at level 25. 
+- Receives a +2 bonus to Saving Throws vs. Spell.
+- Deflect Missiles: +1 bonus to AC vs. missile attacks every 3 levels.
+- Starts with an Armor Class of 9 at 1st level and gains an additional +1 bonus every 2 levels.
+- May use the Stunning Blow ability once per day. Gains one use at level 1 and an additional use every 4 levels thereafter.
+
+STUNNING BLOW: All successful attacks within the next round force the victim to save vs. Spell or be stunned. This special ability automatically modifies normal attacks; no targeting needs to be done.
+
+- 5th level: Becomes immune to all diseases and cannot be slowed or hasted.
+- 7th level: May use the Lay On Hands ability on <PRO_HIMHER>self to heal 2 Hit Points per level.
+- 8th level: Gains a -1 bonus to Speed Factor.
+- 9th level: Gains a +1 bonus to all Saving Throws and becomes immune to charm.
+- 11th level: Becomes immune to poison.
+- 12th level: Gains another -1 bonus to Speed Factor.
+- 13th level: May use the Quivering Palm ability once per day.
+
+QUIVERING PALM: The next successful attack forces the opponent to save vs. Spell or die. This special ability automatically modifies normal attacks; no targeting needs to be done.
+
+- 20th level: Becomes immune to non-magical weapons.
+- Alignment restricted to lawful.
+- Hit Die: d8
+~
+@20001   = ~STRENGTH: Strength measures a character's muscle, endurance, and stamina. High Strength scores result in bonuses to damage rolls, to-hit rolls, and a character's maximum encumbrance. It is the prime requisite of Fighters.
+
+Melee bonuses:
+14: +1 damage
+15: +2 damage
+16: +1 thac0, +2 damage
+17: +1 thac0, +3 damage
+18: +1 thac0, +4 damage
+18/xx: +2 thac0, +4 damage (warriors only)
+19: +2 thac0, +5 damage
+20: +2 thac0, +6 damage
+21: +3 thac0, +6 damage
+22: +3 thac0, +7 damage
+23: +4 thac0, +7 damage
+24: +4 thac0, +8 damage
+25: +4 thac0, +9 damage~
+@20002   = ~DEXTERITY: Dexterity measures a character's hand-eye coordination, agility, reflexes, and balance. A high Dexterity score improves a character's armor class, and to-hit rolls with ranged weapons. It is the prime requisite of the Thief.
+
+Bonuses:
+13: -1 to AC
+14: -1 to AC, +1 ranged thac0
+15: -2 to AC, +1 ranged thac0
+16: -2 to AC, +2 ranged thac0, +1 melee thac0
+17: -3 to AC, +2 ranged thac0, +1 melee thac0
+18: -4 to AC, +3 ranged thac0, +1 melee thac0
+19: -5 to AC, +3 ranged thac0, +2 melee thac0
+20: -6 to AC, +3 ranged thac0, +2 melee thac0
+21: -6 to AC, +4 ranged thac0, +2 melee thac0
+22: -7 to AC, +4 ranged thac0, +2 melee thac0
+23: -7 to AC, +4 ranged thac0, +3 melee thac0
+24: -8 to AC, +4 ranged thac0, +3 melee thac0
+25: -8 to AC, +5 ranged thac0, +3 melee thac0
+~
+@20003   = ~CONSTITUTION: Constitution measures a character's fitness, health, and physical resistance to hardship, injury, and disease. This ability is important to the Ranger.
+
+Bonuses:
+15: +1 hit point per level
+16: +2 hit points per level
+17: +3 hit points per level (warriors only)
+18: +4 hit points per level (warriors only)
+19+: +5 hit points per level (warriors only) and regeneration
+~
+@20004   = ~INTELLIGENCE: Intelligence measures a character's memory, reasoning, and learning ability. High Intelligence gives an increased chance to make saving throws against enchantments and illusion magic, and more powerful spellcasting. It is the prime requisite of the Mage.
+
+Note: A character with an Intelligence score of 8 or less is illiterate and cannot use scrolls or most wands.
+
+General adjustments:
+5:  -4 save vs. spells
+6:  -3 save vs. spells
+7:  -2 save vs. spells
+8:  -2 save vs. spells
+9:  -1 save vs. spells
+10:  -1 save vs. spells
+...
+15: +1 to save vs. spells
+17: +2 to save vs. spells
+19: +3 to save vs. spells
+21: +4 to save vs. spells
+23: +5 to save vs. spells
+25: +6 to save vs. spells
+
+Bonuses for mages:
+13: +1 1st-level spell slot
+14: +2 1st-level spell slots
+15: +1 2nd-level spell slot
+16: +2 2nd-level spell slots
+17: +1 3rd-level spell slot
+18: +1 4th-level spell slot
+19: +2 3rd-level spell slots
+20: +1 5th-level spell slot
+21: +2 4th-level spell slots
+22: +1 6th-level spell slot
+23: +2 5th-level spell slots
+24: +1 7th-level spell slot
+25: +2 6th-level spell slots
+~
+@20005   = ~WISDOM: Wisdom measures a character's enlightenment, judgment, and common sense. It is the prime requisite of priests, who gain extra spells from high Wisdom scores.
+
+General adjustments:
+5:  -3 save vs. polymorph
+6:  -3 to save vs. death
+7:  -2 save vs. polymorph
+8:  -2 to save vs. death
+9:  -1 save vs. polymorph
+10: -1 to save vs. death
+...
+15: +1 to save vs. polymorph
+16: +1 to save vs. death
+17: +2 to save vs. polymorph
+18: +2 to save vs. death
+19: +3 to save vs. polymorph
+20: +3 to save vs. death
+21: +4 to save vs. polymorph
+22: +4 to save vs. death
+23: +5 to save vs. polymorph
+24: +5 to save vs. death
+25: +6 to save vs. polymorph
+
+Bonuses for clerics and druids:
+13: +1 1st-level spell
+14: +1 2nd-level spell
+15: +1 1st-level spell
+16: +1 3rd-level spell
+17: +1 2nd-level spell
+18: +1 4th-level spell
+19: +1 3rd-level spell
+20: +1 5th-level spell
+21: +1 4th-level spell
+22: +1 6th-level spell
+23: +1 5th-level spell
+24: +1 6th-level spell
+25: +1 7th-level spell
+~
+@20006   = ~CHARISMA: Charisma measures a character's personal magnetism and strength of spirit. It reflects what some cultures call 'karma,' or 'soul.' High Charisma helps with saving throws and luck. This ability is important to the Druid, Bard, and Paladin.
+
+Adjustments: 
+5:  -2 Luck, -3 to save vs. breath
+6:  -2 to save vs. wands
+7:  -1 Luck
+8:  -2 to save vs. breath
+9:  -1 to save vs. wands
+10: -1 to save vs. breath
+...
+14: +2% XP progression
+15: +4% XP, +1 to save vs. breath
+16: +6% XP, +1 to save vs. wands
+17: +8% XP, +2 to save vs. breath
+18: +10% XP, +2 to save vs. wands, +1 Luck
+19: +12% XP, +3 to save vs. breath
+20: +14% XP, +3 to save vs. wands
+21: +16% XP, +4 to save vs. breath
+22: +17% XP, +4 to save vs. wands
+23: +18% XP, +2 Luck
+24: +19% XP, +5 to save vs. breath
+25: +20% XP, +5 to save vs. wands
+
+Bonuses for bards:
+13: +1 1st-level spell slot
+14: +2 1st-level spell slots
+15: +1 2nd-level spell slot
+16: +2 2nd-level spell slots
+17: +1 3rd-level spell slot
+18: +1 4th-level spell slot
+19: +2 3rd-level spell slots
+20: +1 5th-level spell slot
+21: +2 4th-level spell slots
+22: +1 6th-level spell slot
+23: +2 5th-level spell slots
+25: +2 6th-level spell slots
+
+Bonuses for sorcerers:
+13: +1 1st-level spell slot
+14: +2 1st-level spell slots
+15: +1 2nd-level spell slot
+17: +2 2nd-level spell slots
+18: +1 3rd-level spell slot
+20: +2 3rd-level spell slots
+21: +1 4th-level spell slot
+23: +2 4th-level spell slots
+24: +1 5th-level spell slot
+~
+@20007   = ~CONSTITUTION: Constitution measures a character's fitness, health, and physical resistance to hardship, injury, and disease. This ability is important to the Ranger.
+
+Bonuses:
+12: 2/3 minimum on hp rolls
+14: +1 hit point per level
+16: +2 hit points per level
+17: max hit points on rolls
+18: +3 hp/level (warriors only)
+19: slow regeneration (2 hp per hour)
+20: +3 hp/level (warriors +4), regen 1 hp/turn
+21: +3 hp/level (warriors +4), regen 2 hp/turn
+22: +4 hp/level (warriors +5), regen 1 hp/2 rounds
+23: +4 hp/level (warriors +5), regen 1 hp/round
+24: +5 hp/level (warriors +6), regen 2 hp/round
+25: +5 hp/level (warriors +6), regen 1 hp/second
+~
+@20008   = ~DEXTERITY: Dexterity measures a character's hand-eye coordination, agility, reflexes, and balance. A high Dexterity score improves a character's armor class, and to-hit rolls with ranged weapons. It is the prime requisite of the Thief.
+
+Bonuses:
+13: -1 to AC
+14: -1 to AC, +1 ranged thac0
+15: -2 to AC, +1 ranged thac0
+16: -3 to AC, +1 ranged thac0, +1 melee thac0
+17: -4 to AC, +2 ranged thac0, +1 melee thac0
+18: -5 to AC, +2 ranged thac0, +1 melee thac0
+19: -6 to AC, +3 ranged thac0, +1 melee thac0
+20: -6 to AC, +3 ranged thac0, +2 melee thac0
+21: -7 to AC, +3 ranged thac0, +2 melee thac0
+22: -7 to AC, +4 ranged thac0, +2 melee thac0
+23: -8 to AC, +4 ranged thac0, +2 melee thac0
+24: -8 to AC, +4 ranged thac0, +3 melee thac0
+25: -9 to AC, +5 ranged thac0, +3 melee thac0
+~
+@20010   = ~CONSTITUTION: Constitution measures a character's fitness, health, and physical resistance to hardship, injury, and disease. This ability is important to the Ranger.
+
+Bonuses:
+12: warriors gain +1 hit point per level
+14: +1 hit point per level (warriors +2)
+16: +2 hit points per level (warriors +3)
+18: +3 hit points per level (warriors +4)
+19: slow regeneration (2 hp per hour)
+20: +4 hp/level (warriors +5), regen 1 hp/turn
+21: +4 hp/level (warriors +5), regen 2 hp/turn
+22: +5 hp/level (warriors +6), regen 1 hp/2 rounds
+23: +5 hp/level (warriors +6), regen 1 hp/round
+24: +6 hp/level (warriors +7), regen 2 hp/round
+25: +6 hp/level (warriors +8), regen 1 hp/second
+~
+
+@20011   = ~HUMANS: Humans are the predominant race in Faerun. Humans rule most of the significant empires and kingdoms in the Forgotten Realms. They are the most social and tolerant of races, excepting perhaps the halflings. Humans may advance as any class. Their stat scores can range from 7 to 18.~
+@20012   = ~DWARVES: Dwarves are short and stocky, easily identifiable by their size and shape. They have ruddy cheeks, dark eyes, and dark hair. Dwarves tend to be dour and taciturn. They are given to hard work, and care little for most humor. They enjoy beer, ale, mead, but most of all, they love gold. There are four racial divisions of dwarves within the Realms: shield dwarves, gold dwarves, wild dwarves, and duergar.
+
+Dwarves have the following traits:
+- +1 Constitution, –1 Dexterity, –2 Charisma.
+- Infravision.
+- +10% Open Locks, +15% Find Traps, +5% Detect Illusion, +10% Set Traps.
+- +3 bonus to Saving Throws vs. Poison/Death.~
+@20013   = ~ELVES: Elves tend to be shorter and slimmer than humans. Their features are finely chiseled and delicate, and they speak in melodic tones. Elves are looked upon as being frivolous and aloof. They concern themselves with natural beauty, dancing, frolicking, and other similar pursuits. Their humor is clever, as are their songs and poetry. There are six racial divisions of elves within the Realms: gold elves, moon elves, wild elves, sea elves, dark elves (drow), and winged elves (avariel).
+
+Elves have the following traits:
+- +1 Dexterity, +1 Intelligence, –1 Strength, -2 Constitution.
+- +1 THAC0 bonus with bows, short swords, and long swords.
+- 90% resistance against charm and sleep magics.
+- Infravision.
+- -5% Open Locks, +5% Pick Pockets, +5% Move Silently, +10% Hide in Shadows.~
+@20014   = ~GNOMES: Kin to dwarves, gnomes are noticeably smaller than their distant cousins. Gnomes, as they proudly maintain, are also less rotund than dwarves. Most have dark tan or brown skin, white hair, and rather large noses. Gnomes have lively and sly senses of humor, especially for practical jokes. They have a love for nature that is only matched by their love for gems and jewelry. There are two racial divisions of gnomes within the Realms: rock gnomes and deep gnomes (svirfneblin).
+
+Gnomes have the following traits:
+- +1 Intelligence, +1 Constitution, -1 Strength, -2 Wisdom.
+- Infravision.
+- +5% Open Locks, +10% Find Traps, +5% Move Silently, +5% Hide in Shadows, +10% Detect Illusion, +5% Set Traps.
+- +2 bonus to Saving Throws vs. Spells.~
+@20015   = ~HALFLINGS: Halflings are short, generally plump people, very much like small humans. Their faces are round and broad, and often quite florid. Their hair is typically curly, and the tops of their feet are covered with coarse hair. Overall they prefer the comforts of home to dangerous adventuring. They enjoy good living, rough humor, and homespun tales. There are three racial divisions of halflings within the Realms: the hairfoot, tallfellow, and stout.
+
+Halflings have the following traits:
+- +1 Dexterity, +1 Charisma –1 Intelligence, -2 Strength.
+- +1 THAC0 bonus with slings.
+- +5% Open Locks, +5% Find Traps, +5% Pick Pockets, +10% Move Silently, +15% Hide in Shadows.
+- +3 bonus to Saving Throws vs. Poison/Death.~
+@20016   = ~HALF-ELVES: Half-elves are a mix of human and elven blood. They are handsome folk, with good features from each of their parent races. A half-elf has the curiosity, inventiveness, and ambition of their human ancestors and the refined senses, love of nature, and artistic tastes of their elven ancestors.
+
+Half-elves have the following traits:
+- +1 Charisma, -1 Wisdom.
+- 30% resistance against charm and sleep magics.
+- Infravision.
+- +10% Pick Pockets, +5% Hide in Shadows.~
+@20017   = ~HALF-ORCS: Half-orcs are born from the union of human and orc parents. They are as tall as humans, but a little heavier due to their muscular builds. Their greenish pigmentation, sloping forehead, jutting jaw, prominent teeth, and coarse body hair make their lineage plain for all to see. In the lands of Amn, half-orcs are tolerated, as unlike in the north the people of Amn haven't had centuries of warfare with orc kind. Half-orcs are known for their great strength.
+
+Half-orcs have the following traits:
+- +1 Strength, -1 Intelligence, -2 Charisma.
+- Infravision.~
+@2021   = ~~
+@2022   = ~~
+@2023   = ~~
+@2024   = ~~
+@2090  = ~Initial weapon proficiency~
+@2091  = ~Advance weapon proficiency~
+@2092  = ~Choose a different weapon~
+//
+@2101  = ~Advance to Proficiency (+) with Bastard Swords~
+@2102  = ~Advance to Proficiency (+) with Long Swords~
+@2103  = ~Advance to Proficiency (+) with Short Swords~
+@2104  = ~Advance to Proficiency (+) with Battle Axes~
+@2105  = ~Advance to Proficiency (+) with Two-Handed Swords~
+@2106  = ~Advance to Proficiency (+) with Katanas~
+@2107  = ~Advance to Proficiency (+) with Scimitars~
+@2108  = ~Advance to Proficiency (+) with Daggers~
+@2109  = ~Advance to Proficiency (+) with War Hammers~
+@2110  = ~Advance to Proficiency (+) with Spears~
+@2111  = ~Advance to Proficiency (+) with Halberds~
+@2112  = ~Advance to Proficiency (+) with Flails~
+@2113  = ~Advance to Proficiency (+) with Maces~
+@2114  = ~Advance to Proficiency (+) with Clubs~
+@2115  = ~Advance to Proficiency (+) with Quarterstaffs~
+@2116  = ~Advance to Proficiency (+) with Crossbows~
+@2117  = ~Advance to Proficiency (+) with Long Bows~
+@2118  = ~Advance to Proficiency (+) with Short Bows~
+@2119  = ~Advance to Proficiency (+) with Darts~
+@2120  = ~Advance to Proficiency (+) with Slings~
+@2121  = ~Advance to Proficiency (+) in Two-Handed Style~
+@2122  = ~Advance to Proficiency (+) in Shield-Fighting Style~
+@2123  = ~Advance to Proficiency (+) in Single-Weapon Style~
+@2124  = ~Advance to Proficiency (+) in Two-Weapon Style~
+//
+@2201  = ~Advance to Specialization (++) with Bastard Swords~
+@2202  = ~Advance to Specialization (++) with Long Swords~
+@2203  = ~Advance to Specialization (++) with Short Swords~
+@2204  = ~Advance to Specialization (++) with Battle Axes~
+@2205  = ~Advance to Specialization (++) with Two-Handed Swords~
+@2206  = ~Advance to Specialization (++) with Katanas~
+@2207  = ~Advance to Specialization (++) with Scimitars~
+@2208  = ~Advance to Specialization (++) with Daggers~
+@2209  = ~Advance to Specialization (++) with War Hammers~
+@2210  = ~Advance to Specialization (++) with Spears~
+@2211  = ~Advance to Specialization (++) with Halberds~
+@2212  = ~Advance to Specialization (++) with Flails~
+@2213  = ~Advance to Specialization (++) with Maces~
+@2214  = ~Advance to Specialization (++) with Clubs~
+@2215  = ~Advance to Specialization (++) with Quarterstaffs~
+@2216  = ~Advance to Specialization (++) with Crossbows~
+@2217  = ~Advance to Specialization (++) with Long Bows~
+@2218  = ~Advance to Specialization (++) with Short Bows~
+@2219  = ~Advance to Specialization (++) with Darts~
+@2220  = ~Advance to Specialization (++) with Slings~
+@2221  = ~Advance to Specialization (++) in Two-Handed Style~
+@2222  = ~Advance to Specialization (++) in Shield-Fighting Style~
+@2223  = ~Advance to Specialization (++) in Single-Weapon Style~
+@2224  = ~Advance to Specialization (++) in Two-Weapon Style~
+//
+@2301  = ~Advance to Mastery (+++) with Bastard Swords~
+@2302  = ~Advance to Mastery (+++) with Long Swords~
+@2303  = ~Advance to Mastery (+++) with Short Swords~
+@2304  = ~Advance to Mastery (+++) with Battle Axes~
+@2305  = ~Advance to Mastery (+++) with Two-Handed Swords~
+@2306  = ~Advance to Mastery (+++) with Katanas~
+@2307  = ~Advance to Mastery (+++) with Scimitars~
+@2308  = ~Advance to Mastery (+++) with Daggers~
+@2309  = ~Advance to Mastery (+++) with War Hammers~
+@2310  = ~Advance to Mastery (+++) with Spears~
+@2311  = ~Advance to Mastery (+++) with Halberds~
+@2312  = ~Advance to Mastery (+++) with Flails~
+@2313  = ~Advance to Mastery (+++) with Maces~
+@2314  = ~Advance to Mastery (+++) with Clubs~
+@2315  = ~Advance to Mastery (+++) with Quarterstaffs~
+@2316  = ~Advance to Mastery (+++) with Crossbows~
+@2317  = ~Advance to Mastery (+++) with Long Bows~
+@2318  = ~Advance to Mastery (+++) with Short Bows~
+@2319  = ~Advance to Mastery (+++) with Darts~
+@2320  = ~Advance to Mastery (+++) with Slings~
+@2321  = ~Advance to Mastery (+++) in Two-Handed Style~
+@2322  = ~Advance to Mastery (+++) in Shield-Fighting Style~
+@2323  = ~Advance to Mastery (+++) in Single-Weapon Style~
+@2324  = ~Advance to Mastery (+++) in Two-Weapon Style~
+//
+@2401  = ~Advance to High Mastery (++++) with Bastard Swords~
+@2402  = ~Advance to High Mastery (++++) with Long Swords~
+@2403  = ~Advance to High Mastery (++++) with Short Swords~
+@2404  = ~Advance to High Mastery (++++) with Battle Axes~
+@2405  = ~Advance to High Mastery (++++) with Two-Handed Swords~
+@2406  = ~Advance to High Mastery (++++) with Katanas~
+@2407  = ~Advance to High Mastery (++++) with Scimitars~
+@2408  = ~Advance to High Mastery (++++) with Daggers~
+@2409  = ~Advance to High Mastery (++++) with War Hammers~
+@2410  = ~Advance to High Mastery (++++) with Spears~
+@2411  = ~Advance to High Mastery (++++) with Halberds~
+@2412  = ~Advance to High Mastery (++++) with Flails~
+@2413  = ~Advance to High Mastery (++++) with Maces~
+@2414  = ~Advance to High Mastery (++++) with Clubs~
+@2415  = ~Advance to High Mastery (++++) with Quarterstaffs~
+@2416  = ~Advance to High Mastery (++++) with Crossbows~
+@2417  = ~Advance to High Mastery (++++) with Long Bows~
+@2418  = ~Advance to High Mastery (++++) with Short Bows~
+@2419  = ~Advance to High Mastery (++++) with Darts~
+@2420  = ~Advance to High Mastery (++++) with Slings~
+@2421  = ~Advance to High Mastery (++++) in Two-Handed Style~
+@2422  = ~Advance to High Mastery (++++) in Shield-Fighting Style~
+@2423  = ~Advance to High Mastery (++++) in Single-Weapon Style~
+@2424  = ~Advance to High Mastery (++++) in Two-Weapon Style~
+//
+@2501  = ~Advance to Grandmastery (+++++) with Bastard Swords~
+@2502  = ~Advance to Grandmastery (+++++) with Long Swords~
+@2503  = ~Advance to Grandmastery (+++++) with Short Swords~
+@2504  = ~Advance to Grandmastery (+++++) with Battle Axes~
+@2505  = ~Advance to Grandmastery (+++++) with Two-Handed Swords~
+@2506  = ~Advance to Grandmastery (+++++) with Katanas~
+@2507  = ~Advance to Grandmastery (+++++) with Scimitars~
+@2508  = ~Advance to Grandmastery (+++++) with Daggers~
+@2509  = ~Advance to Grandmastery (+++++) with War Hammers~
+@2510  = ~Advance to Grandmastery (+++++) with Spears~
+@2511  = ~Advance to Grandmastery (+++++) with Halberds~
+@2512  = ~Advance to Grandmastery (+++++) with Flails~
+@2513  = ~Advance to Grandmastery (+++++) with Maces~
+@2514  = ~Advance to Grandmastery (+++++) with Clubs~
+@2515  = ~Advance to Grandmastery (+++++) with Quarterstaffs~
+@2516  = ~Advance to Grandmastery (+++++) with Crossbows~
+@2517  = ~Advance to Grandmastery (+++++) with Long Bows~
+@2518  = ~Advance to Grandmastery (+++++) with Short Bows~
+@2519  = ~Advance to Grandmastery (+++++) with Darts~
+@2520  = ~Advance to Grandmastery (+++++) with Slings~
+@2521  = ~Advance to Grandmastery (+++++) in Two-Handed Style~
+@2522  = ~Advance to Grandmastery (+++++) in Shield-Fighting Style~
+@2523  = ~Advance to Grandmastery (+++++) in Single-Weapon Style~
+@2524  = ~Advance to Grandmastery (+++++) in Two-Weapon Style~
+//
+@2632  = ~Choose weapon focus~
+@2648  = ~KENSAI: This class's name, which means "sword saint" in the common tongue, refers to a warrior who has been specially trained to be one with a single weapon. The kensai is deadly, fast, and trained to fight without the protection of armor. 
+
+NOTE: During skill selection, where you assign proficiency points is more or less meaningless.  When you choose a weapon of focus, you will begin the game proficient in that weapon and, in the single-weapon, two-weapon, and two-handed weapon fighting styles.
+
+Abilities:
+- +1/2 attack per round.
+- +1 to damage rolls every 4 levels.
+- +1 bonus to Armor Class every 6 levels (starting at 1st level).
+- -1 bonus to Weapon Speed Factor every 10 levels.
+- May use the Kai ability twice per day every 10 levels (starts at 1st level with one use).
+
+KAI: All successful attacks within the next 10 seconds deal maximum damage.
+
+Restrictions:
+- May not wear any armor.
+- May not use missile weapons.
+- May not dual-class.
+~
+

@@ -1,0 +1,49 @@
+
+//__________________________________________________________________________________
+//__________________________________________________________________________________
+//
+//						HIT DICE CHANGES
+//__________________________________________________________________________________
+//__________________________________________________________________________________
+
+DEFINE_ACTION_FUNCTION revise_hit_dice_hardcore BEGIN
+
+//CHANGE HIT DICE TABLES_______________________________________________________________
+//
+COPY ~%MOD_FOLDER%/data/stats/hpconbon_hc.2da~ ~override/hpconbon.2da~
+COPY ~%MOD_FOLDER%/data/stats/hpbarb.2da~ ~override~
+COPY ~%MOD_FOLDER%/data/stats/hpcm.2da~ ~override~
+COPY ~%MOD_FOLDER%/data/stats/hpct.2da~ ~override~
+COPY ~%MOD_FOLDER%/data/stats/hpfc.2da~ ~override~
+COPY ~%MOD_FOLDER%/data/stats/hpfm.2da~ ~override~
+COPY ~%MOD_FOLDER%/data/stats/hpfmt.2da~ ~override~
+COPY ~%MOD_FOLDER%/data/stats/hpft.2da~ ~override~
+COPY ~%MOD_FOLDER%/data/stats/hpmt.2da~ ~override~
+COPY ~%MOD_FOLDER%/data/stats/hpmonk.2da~ ~override~
+COPY ~%MOD_FOLDER%/data/stats/hpprs.2da~ ~override~
+COPY ~%MOD_FOLDER%/data/stats/hprog.2da~ ~override~
+COPY ~%MOD_FOLDER%/data/stats/hpwar.2da~ ~override~
+COPY ~%MOD_FOLDER%/data/stats/hpwiz.2da~ ~override~
+//___________________________________________________________________________________
+
+
+//EDIT CON DESCRIPTION_______________________________________________________________
+//
+  STRING_SET 9583 @20007 
+//___________________________________________________________________________________
+
+
+//ADD A FEW HP TO NPCs_______________________________________________________________
+//
+COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
+	PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+		READ_LONG 0x1cc biography
+		PATCH_IF (biography > 0 && biography < 2147483647) BEGIN // party-joinable NPC
+			LPF ADD_CRE_EFFECT INT_VAR opcode=17 target=1 timing=1 power=1 paramater1=4 parameter2=0 END
+			LPF ADD_CRE_EFFECT INT_VAR opcode=18 target=1 timing=9 power=1 paramater1=4 parameter2=0 END
+		END
+	END
+BUT_ONLY
+//___________________________________________________________________________________
+
+END // end function
