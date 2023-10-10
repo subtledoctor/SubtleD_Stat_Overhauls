@@ -20,6 +20,7 @@
 @151   = ~Generous (above-average) hit points~
 @152   = ~Closer to average hit points~
 @153   = ~Reduced hit points~
+@160   = ~Saving Throw Overhaul~
 @200   = ~Slower, standardized XP Tables~
 @210   = ~No Murder XP~
 @211   = ~kills give 1/8th XP~
@@ -35,9 +36,27 @@
 @232  = ~161,000~
 @233  = ~240,000~
 @234  = ~400,000~
-@250   = ~MRO - Magic Resistance Overhaul~
+@250   = ~Magic Resistance Overhaul~
 @251   = ~Replace Magic Resistance with Other Effects~
 @252   = ~Reduce Magic Resistance~
+//
+//
+@1400   = ~Spell Saving Throw Standardization~
+@1401   = ~Death Ward~
+@1402   = ~Death Ward
+Level: 4
+Range: Visual range of caster
+Duration: 4 hours 
+Casting Time: 1 round 
+Area of Effect: 1 creature
+Saving Throw: None 
+
+This spell protects the target from all forms of death magic for the duration of the spell. This includes, but is not limited to, Disintegrate, Power Word Kill, Death Spell and Finger of Death. The beneficiary of the spell also receives a +10 bonus to saving throws vs. Death, applicable against any necromantic magic not specifically blocked by the Death Ward.~
+@16001   = ~Spells / Enchantments~
+@16002   = ~Breath Weapon / Dodge~
+@16003   = ~Poison / Death~
+@16004   = ~Petrification / Polymorph~
+@16005   = ~ ~
 //
 //
 @1611   = ~WIZARD SLAYER: This warrior has been specially trained by <PRO_HISHER> sect to excel in hunting and combating spellcasters of all kinds.

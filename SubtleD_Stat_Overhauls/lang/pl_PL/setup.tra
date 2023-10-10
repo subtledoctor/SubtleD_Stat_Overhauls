@@ -20,6 +20,7 @@
 @151  = ~Hojne (ponadprzecietne) punkty zycia~
 @152  = ~Hardcorowe (blizsze usrednionym) punkty zycia~
 @153  = ~Zredukowane punkty zycia~
+@160  = ~Rewizja rzutow obronnych~
 @200  = ~Ujednolicone tabele PD~
 @210  = ~Mniejsza ilosc PD za walke~
 @211  = ~zabicie daje 1/8 PD~
@@ -38,6 +39,24 @@
 @250  = ~Rewizja odpornosci na magie (zainstaluj po modyfikacji aTweaks!)~
 @251  = ~Replace Magic Resistance with Other Effects~
 @252  = ~Reduce Magic Resistance~
+//
+//
+@1400 = ~Ujednolicone rzuty obronne przeciw czarom~
+@1401 = ~Osłona przed śmiercią~
+@1402 = ~Osłona przed śmiercią
+Poziom: 4
+Zasięg: pole widzenia rzucającego czar
+Czas działania: 4 godziny
+Czas rzucania: 1 runda
+Obszar działania: 1 istota
+Rzut obronny: brak
+
+Czar ten chroni cel przed wszystkimi postaciami magii śmierci. Ochrona ta działa przez cały czas działania zaklęcia. Uwzględnić należy, ale nie tylko, takie czary jak: Słowo mocy: giń, Zaklęcie śmierci i Palec śmierci. Ponad to rzucający czar zyskuje premię +10 do rzutów obronnych przeciw śmierci.~
+@16001 = ~Czary / Zaczarowania~
+@16002 = ~Zionięcie / Unik~
+@16003 = ~Trucizna / Śmierć~
+@16004 = ~ Petryfikacja / Polimorfia: ~
+@16005 = ~ ~
 //
 //
 @1611 = ~ZABÓJCA MAGÓW: Ten wojownik przeszedł specjalne szkolenie w swojej sekcie, aby być jak najlepiej przygotowanym do ścigania i walki ze wszelkiego rodzaju magami.
