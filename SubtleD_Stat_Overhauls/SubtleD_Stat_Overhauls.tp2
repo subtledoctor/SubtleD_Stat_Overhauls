@@ -1,17 +1,13 @@
 BACKUP ~weidu_external/backup/SubtleD_Stat_Overhauls~
 AUTHOR ~SubtleD~
 
-VERSION ~v1.0~
+VERSION ~v1.1~
 
 ALWAYS
 
-// -->	INCLUDE ~Combat_Skill_Proficiencies/lib/joinable_npcs.tpa~
+	INCLUDE ~%MOD_FOLDER%/lib/misc_functions.tpa~
 
-	INCLUDE ~Combat_Skill_Proficiencies/lib/misc_functions.tpa~
-
-// -->	INCLUDE ~Combat_Skill_Proficiencies/lib/add_spell_header.tpa~
-
-	INCLUDE ~Combat_Skill_Proficiencies/lib/fl#add_kit_ee.tpa~
+	INCLUDE ~%MOD_FOLDER%/lib/fl#add_kit_ee.tpa~
 
 	LAF fix_kitlist_missing_ids END
 
