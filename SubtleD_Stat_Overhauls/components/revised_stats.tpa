@@ -702,7 +702,7 @@ ACTION_IF (int_extra_prof = 1) BEGIN
   OUTER_SET script_higher_levels = 0
 */
 
-  LAF PROF_DIALOGUE INT_VAR script_level_one = 0 script_higher_levels = 0 STR_VAR prof_script_name = ~d5iprx~ class_dlgs = ~all~ END
+  LAF PROF_DIALOGUE INT_VAR script_level_one = 0 script_higher_levels = 0 ignore_max = 0 STR_VAR prof_script_name = ~d5iprx~ class_dlgs = ~all~ END
 
   CREATE SPL ~d5iprx1~
     WRITE_SHORT 0x1c 4
@@ -712,6 +712,8 @@ ACTION_IF (int_extra_prof = 1) BEGIN
 
   COPY_EXISTING ~d5iprx.spl~ ~override/d5iprxa.spl~
     LPF ADD_SPELL_EFFECT INT_VAR opcode = 146 target = 1 parameter2 = 1 timing = 1 STR_VAR resource = ~d5cs000~ END
+//    LPF ADD_SPELL_EFFECT INT_VAR opcode = 172 target = 1 timing = 1 STR_VAR resource = ~d5iprxa~ END
+    LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 172 STR_VAR match_resource = ~d5iprx~ resource = ~d5iprxa~ END
   COPY_EXISTING ~d5iprxa.spl~ ~override/d5iprxb.spl~
     LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 172 STR_VAR match_resource = ~d5iprxa~ resource = ~d5iprxb~ END
   IF_EXISTS BUT_ONLY
