@@ -1,0 +1,557 @@
+@1   = ~ignore le composant~
+@2   = ~ignore le composant non-EE~ //unused
+@3   = ~deja inclus~
+@4   = ~ignore les composants d'ajustement~ //unused
+@5   = ~ignore les composants qui ajoutent de nouveaux kits~ //unused
+@6   = ~...~
+@7   = ~ignore les composants concernant les objets~ //unused
+@8   = ~ignore pour IWD~
+@9   = ~modification de kit~ //unused
+//
+//
+@100   = ~Revision des scores de caracteristique~
+@110   = ~Sorts bonus lies aux stats~
+@120   = ~Sorts bonus lies aux stats pour les lanceurs 5E~
+@121   = ~bonus a la fois pour les emplacements de memorisation et de lancer~
+@122   = ~bonus seulement pour les emplacements de lancer~
+@130   = ~Bonus de force complet seulement pour les armes a 2 mains~
+@140   = ~Activer les jets de concentration~
+@150   = ~Revision des points de vie~
+@151   = ~Distribution genereuse des points de vie~
+@152   = ~Points de vie plus proches de la moyenne~
+@153   = ~Points de vie reduits~
+@160   = ~Revision des jets de sauvegarde~
+@200   = ~Tables de PX standardisee, plus lente~
+@210   = ~Pas de PX pour le meurtre~
+@211   = ~tuer donne 1/8 des PX~
+@212   = ~tuer donne 1/4 des PX~
+@213   = ~tuer donne la moitie des PX~
+@220  = ~Choisir l'experience au debut de SoD~
+@221  = ~65 000~
+@222  = ~90 000~
+@223  = ~125 000~
+@224  = ~161 000~
+@230  = ~Choisir l'experience au debut de SoA~
+@231  = ~90 000~
+@232  = ~161 000~
+@233  = ~240 000~
+@234  = ~400 000~
+@250   = ~Revision de la resistance a la magie~
+@251   = ~Remplacer la resistance a la magie par d'autres effets~
+@252   = ~Reduire la resistance a la magie~
+//
+//
+@1400   = ~Normalisation des jets de sauvegarde contre les sorts~
+@1401   = ~Protection contre la mort~
+@1402   = ~Protection contre la mort
+Niveau : 4
+Portée : champ visuel du lanceur
+Durée : 4 heures
+Temps d'incantation : 1 round
+Zone d'effet : 1 créature
+Jet de sauvegarde : aucun
+
+Ce sort protège sa cible de toutes les formes de magie de mort pendant la durée du sort. Cela inclut entre autres : Désintégration, Mot de pouvoir : Mort, Sort de mort, Doigt de mort, etc. Le bénéficiaire du sort reçoit en outre un bonus de 10 points aux jets de sauvegarde contre la mort, pris en compte pour tous les sorts de nécromancie qui ne sont pas spécifiquement bloqués par Protection contre la mort.
+~
+@16001   = ~Sorts / Enchantements~
+@16002   = ~Armes de souffles / Esquive~
+@16003   = ~Poison / Mort~
+@16004   = ~Pétrification / Polymorphisme~
+@16005   = ~ ~
+//
+//
+@1611   = ~TUEUR DE MAGICIENS : Ce guerrier a reçu un entraînement spécifique qui lui permet d'exceller dans la chasse et l'attaque des lanceurs de sorts.
+
+Avantages :
+- Tout lanceur de sort touché subit 10 % de probabilité cumulative de rater ses incantations.
+- Bonus de 1point à tous les jets de sauvegarde au niveau 1, puis tous les quatre niveaux par la suite.
+
+Désavantages :
+- Ne peut pas utiliser d'objets magiques autres qu'armures et armes.~
+// modifications to MR - _NO_ MnG revised monk fists
+@1615   = ~MOINE : Les moines sont des guerriers qui cherchent la perfection à travers la contemplation et l'action. Ce sont des combattants polyvalents, bien entraînés au combat sans arme ni armure. Les moines ne peuvent pas lancer de sorts, mais ils ont des pouvoirs magiques uniques. Ils canalisent une énergie subtile, appelée « Ki », qui leur permet de réaliser des exploits incroyables. La capacité la plus connue des moines est leur aptitude à assommer un adversaire en le frappant sans armes.
+
+CAPACITÉS :
+
+- Ne peut porter aucune armure.
+- Ne peut utiliser que les armes de voleur, sauf les armes à deux mains.
+- Ne peut être que compétent (une étoile) dans le maniement des armes.
+- Ne peut être que compétent (une étoile) dans le style de combat à une arme, et ne peut pas ajouter de points de compétence dans les autres styles de combat.
+- Bonus de 2 points en vitesse de déplacement, +1 tous les 5 niveaux.
+- Le moine peut effectuer une attaque à mains nues par round ; il gagne 1/2 attaque supplémentaire tous les 3 niveaux. Quand le moine gagne des niveaux, les dégâts infligés par ses poings augmentent également :
+Niveau 1-2 : 1d6.
+Niveau 3-5 : 1d8.
+Niveau 6-8 : 1d10.
+Niveau 9-14 : 1d12.
+Niveau 15+ : 1d20.
+- Bonus de 1 point à tous les jets de sauvegarde au niveau 1, puis tous les 4 niveaux par la suite.
+- Au niveau 9, le poing du moine est considéré comme une arme +1 et bénéficie donc d'un bonus de 1 point à ses jets d'attaque et de dégâts. Cet enchantement évolue pour atteindre +2 au niveau 12, +3 au niveau 15 et +4 au niveau 25.
+- Bonus de 2 points aux jets de sauvegarde contre les sorts.
+- Parade de projectiles : bonus de 1 point à la classe d'armure contre les projectiles par tranche de 3 niveaux.
+- La classe d'armure initiale d'un moine est de 9 au niveau 1, et augmente ensuite de 1 tous les 2 niveaux.
+- Peut utiliser « Coup étourdissant » une fois par jour tous les 4 niveaux.
+
+COUP ÉTOURDISSANT : Toutes les attaques réussies au cours du round suivant obligent la victime à réussir un jet de sauvegarde contre les sorts sous peine d'être assommée. Remarque : ce talent spécial modifie automatiquement l'attaque normale d'un moine, sans avoir besoin de viser une cible.
+
+- Niveau 5 : Immunité à la maladie, à la hâte et au ralentissement.
+- Niveau 7 : Il peut utiliser « Imposition des mains » pour guérir 2 points de vie par niveau.
+- Niveau 8 : Bonus de 1 point au facteur de vitesse.
+- Niveau 9 : Bonus de 1 point aux jets de sauvegarde et immunité aux charmes.
+- Niveau 11 : Immunité au poison.
+- Niveau 12 : Bonus de 1 point au facteur de vitesse.
+- Niveau 13 : « Paume Vibratoire » une fois par jour.
+
+PAUME VIBRATOIRE : Si le moine touche un adversaire, ce dernier doit réussir un jet de sauvegarde contre les sorts ou mourir. Remarque : ce talent spécial modifie automatiquement l'attaque normale d'un moine, sans avoir besoin de viser une cible.
+
+- Niveau 20 : Immunité aux armes non-magiques.
+- Doit être d'alignement loyal.
+- Dés de vie : d8.
+~
+// modifications to MR- MnG revised monk fists
+@1618   = ~MOINE : Les moines sont des guerriers qui cherchent la perfection à travers la contemplation et l'action. Ce sont des combattants polyvalents, bien entraînés au combat sans arme ni armure. Les moines ne peuvent pas lancer de sorts, mais ils ont des pouvoirs magiques uniques. Ils canalisent une énergie subtile, appelée « Ki », qui leur permet de réaliser des exploits incroyables. La capacité la plus connue des moines est leur aptitude à assommer un adversaire en le fr
+CAPACITÉS :
+
+- Ne peut porter aucune armure.
+- Ne peut utiliser que les armes de voleur, sauf les armes à deux mains.
+- Ne peut être que compétent (une étoile) dans le maniement des armes.
+- Ne peut être que compétent (une étoile) dans le style de combat à une arme, et ne peut pas ajouter de points de compétence dans les autres styles de combat.
+- Bonus de 2 points en vitesse de déplacement, +1 tous les 5 niveaux.
+- Le moine peut effectuer 2 attaques à mains nues par round ; il gagne 1/2 attaque supplémentaire tous les 3 niveaux. Les attaques à mains nues infligent des dégâts non-létaux et augmentent avec le niveau comme suit :
+Niveau 1-2 : 1d3.
+Niveau 3-5 : 1d4.
+Niveau 6-8 : 1d5.
+Niveau 9-11 : 1d6.
+Niveau 12-14 : 1d7.
+Niveau 15-18 : 1d8.
+Niveau 19-24 : 1d9.
+Niveau 25+ : 1d10.
+- Un moine peut choisir d'insuffler dans ses attaques à mains nues de l'énergie ki. Ainsi améliorés, les poings du moine infligent des dégâts contondants, se comportent comme des armes enchantées +1 et font +1 dégât magique. Ce bonus augmente aux niveaux 9, 15 et 25.
+- Bonus de 1 point à tous les jets de sauvegarde au niveau 1, puis tous les 4 niveaux par la suite.
+- Au niveau 9, le poing du moine est considéré comme une arme +1 et bénéficie donc d'un bonus de +1 à ses jets d'attaque et de dégâts. Cet enchantement évolue pour atteindre +2 au niveau 12, +3 au niveau 15 et +4 au niveau 25.
+- Bonus de 2 points aux jets de sauvegarde contre les Sorts.
+- Parade de projectiles : +1 à la classe d'armure contre les projectiles par tranche de 3 niveaux.
+- La classe d'armure initiale d'un moine est de 9 au niveau 1, et augmente ensuite de 1 tous les 2 niveaux.
+- Peut utiliser « Coup étourdissant » une fois par jour tous les 4 niveaux.
+
+COUP ÉTOURDISSANT : Toutes les attaques réussies au cours du round suivant obligent la victime à réussir un jet de sauvegarde contre les sorts sous peine d'être assommée. Remarque : ce talent spécial modifie automatiquement l'attaque normale d'un moine, sans avoir besoin de viser une cible.
+
+- Niveau 5 : Immunité à la maladie, à la hâte et au ralentissement.
+- Niveau 7 : Il peut utiliser « Imposition des mains » pour guérir 2 points de vie par niveau.
+- Niveau 8 : Bonus de 1 point au facteur de vitesse.
+- Niveau 9 : Bonus de 1 point aux jets de sauvegarde et immunité aux charmes.
+- Niveau 11 : Immunité au poison.
+- Niveau 12 : Bonus de 1 point au facteur de vitesse.
+- Niveau 13 : « Paume Vibratoire » une fois par jour.
+
+PAUME VIBRATOIRE : Si le moine touche un adversaire, ce dernier doit réussir un jet de sauvegarde contre les sorts ou mourir. Remarque : ce talent spécial modifie automatiquement l'attaque normale d'un moine, sans avoir besoin de viser une cible.
+
+- Niveau 20 : Immunité aux armes non-magiques.
+- Doit être d'alignement loyal.
+- Dés de vie : d8.
+~
+@20001   = ~FORCE : la force mesure la force musculaire, l'endurance et la résistance d'un personnage. Des scores élevés de force donnent des bonus aux jets de dégâts, d'attaque et à l'encombrement maximal d'un personnage. C'est la première qualité exigée d'un guerrier.
+
+Bonus de mêlée :
+14 : +1 dégâts
+15 : +2 dégâts
+16 : +1 TAC0, +2 dégâts
+17 : +1 TAC0, +3 dégâts
+18 : +1 TAC0, +4 dégâts
+18/xx : +2 TAC0, +4 dégâts (combattants seulement)
+19 : +2 TAC0, +5 dégâts
+20 : +2 TAC0, +6 dégâts
+21 : +3 TAC0, +6 dégâts
+22 : +3 TAC0, +7 dégâts
+23 : +4 TAC0, +7 dégâts
+24 : +4 TAC0, +8 dégâts
+25 : +4 TAC0, +9 dégâts~
+@20002   = ~DEXTÉRITÉ : la dextérité mesure la coordination entre les mains et les yeux d'un personnage, son agilité, ses réflexes et son équilibre. Une dextérité élevée améliore la classe d'armure d'un personnage et ses jets d'attaque à distance. C'est la première qualité exigée d'un voleur.
+
+Bonus :
+13 : -1 à la CA
+14 : -1 à la CA, +1 TAC0 à distance
+15 : -2 à la CA, +1 TAC0 à distance
+16 : -2 à la CA, +2 TAC0 à distance, +1 TAC0 en mêlée
+17 : -3 à la CA, +2 TAC0 à distance, +1 TAC0 en mêlée
+18 : -4 à la CA, +3 TAC0 à distance, +1 TAC0 en mêlée
+19 : -5 à la CA, +3 TAC0 à distance, +2 TAC0 en mêlée
+20 : -6 à la CA, +3 TAC0 à distance, +2 TAC0 en mêlée
+21 : -6 à la CA, +4 TAC0 à distance, +2 TAC0 en mêlée
+22 : -7 à la CA, +4 TAC0 à distance, +2 TAC0 en mêlée
+23 : -7 à la CA, +4 TAC0 à distance, +3 TAC0 en mêlée
+24 : -8 à la CA, +4 TAC0 à distance, +3 TAC0 en mêlée
+25 : -8 à la CA, +5 TAC0 à distance, +3 TAC0 en mêlée
+~
+@20003   = ~CONSTITUTION : la constitution mesure la forme physique d'un personnage, sa santé et sa résistance physique à la douleur, aux blessures et aux maladies. Cette caractéristique est importante pour le rôdeur.
+
+Bonus :
+15 : +1 point de vie par niveau
+16 : +2 points de vie par niveau
+17 : +3 points de vie par niveau (combattants seulement)
+18 : +4 points de vie par niveau (combattants seulement)
+19+ : +5 points de vie par niveau (combattants seulement) et régénération
+~
+@20004   = ~INTELLIGENCE : l'intelligence mesure la mémoire, la capacité de raisonnement et d'apprentissage d'un personnage. Une intelligence élevée donne une chance plus élevée de réussir des jets de sauvegarde contre les enchantements et l'illusion, ainsi que des sorts plus puissants. C'est la première qualité exigée d'un mage.
+
+Remarque : Un personnage avec moins de 8 en intelligence est illettré et ne peut pas utiliser les parchemins et la plupart des baguettes, peu importe sa classe.
+
+Ajustements généraux :
+5 : malus de 4 points aux jets contre les sorts
+6 : malus de 3 points aux jets contre les sorts
+7 : malus de 2 points aux jets contre les sorts
+8 : malus de 2 points aux jets contre les sorts
+9 : malus de 1 point aux jets contre les sorts
+10 : malus de 1 point aux jets contre les sorts
+...
+15 : bonus de 1 point aux jets contre les sorts
+17 : bonus de 2 points aux jets contre les sorts
+19 : bonus de 3 points aux jets contre les sorts
+21 : bonus de 4 points aux jets contre les sorts
+23 : bonus de 5 points aux jets contre les sorts
+25 : bonus de 6 points aux jets contre les sorts
+
+Bonus pour les mages :
+13 : +1 emplacement de sort de niveau 1
+14 : +2 emplacements de sort de niveau 1
+15 : +1 emplacement de sort de niveau 2
+16 : +2 emplacements de sort de niveau 2
+17 : +1 emplacement de sort de niveau 3
+18 : +1 emplacement de sort de niveau 4
+19 : +2 emplacements de sort de niveau 3
+20 : +1 emplacement de sort de niveau 5
+21 : +2 emplacements de sort de niveau 4
+22 : +1 emplacement de sort de niveau 6
+23 : +2 emplacements de sort de niveau 5
+24 : +1 emplacement de sort de niveau 7
+25 : +2 emplacements de sort de niveau 6
+~
+@20005   = ~SAGESSE : la sagesse mesure l'instruction, le jugement et le bon sens d'un personnage. C'est la première qualité exigée d'un prêtre, qui obtient des sorts supplémentaires avec un score de sagesse élevé.
+
+Ajustements généraux :
+5 : malus de 3 points aux jets contre la métamorphose
+6 : malus de 3 points aux jets contre la mort
+7 : malus de 2 points aux jets contre la métamorphose
+8 : malus de 2 points aux jets contre la mort
+9 : malus de 1 point aux jets contre la métamorphose
+10 : malus de 1 point aux jets contre la mort
+...
+15 : bonus de 1 point aux jets contre la métamorphose
+16 : bonus de 1 point aux jets contre la mort
+17 : bonus de 2 points aux jets contre la métamorphose
+18 : bonus de 2 points aux jets contre la mort
+19 : bonus de 3 points aux jets contre la métamorphose
+20 : bonus de 3 points aux jets contre la mort
+21 : bonus de 4 points aux jets contre la métamorphose
+22 : bonus de 4 points aux jets contre la mort
+23 : bonus de 5 points aux jets contre la métamorphose
+24 : bonus de 5 points aux jets contre la mort
+25 : bonus de 6 points aux jets contre la métamorphose
+
+Bonus pour clercs et druides :
+13 : +1 sort de niveau 1
+14 : +1 sort de niveau 2
+15 : +1 sort de niveau 1
+16 : +1 sort de niveau 3
+17 : +1 sort de niveau 2
+18 : +1 sort de niveau 4
+19 : +1 sort de niveau 3
+20 : +1 sort de niveau 5
+21 : +1 sort de niveau 4
+22 : +1 sort de niveau 6
+23 : +1 sort de niveau 5
+24 : +1 sort de niveau 6
+25 : +1 sort de niveau 7
+~
+@20006   = ~CHARISME : le charisme mesure les qualités de persuasion d'un personnage, son magnétisme personnel et sa capacité à diriger. Elle reflète ce que certaines cultures désignent comme « karma » ou l'« âme ». Un charisme élevé apporte une aide pour les jets de sauvegarde et la chance. Cette caractéristique est importante pour le druide, le barde et le paladin.
+
+Ajustements :
+5 :  malus de 2 points à la chance, malus de 3 points aux jets contre les souffles
+6 :  malus de 2 points aux jets contre les baguettes
+7 :  malus de 1 point à la chance
+8 :  malus de 2 points aux jets contre les souffles
+9 :  malus de 1 point aux jets contre les baguettes
+10 : malus de 1 point aux jets contre les souffles
+...
+14 : +2 % progression des PX
+15 : +4 % PX, bonus de 1 point aux jets contre les souffles
+16 : +6 % PX, bonus de 1 point aux jets contre les baguettes
+17 : +8 % PX, bonus de 2 points aux jets contre les souffles
+18 : +10 % PX, bonus de 2 points aux jets contre les baguettes, bonus de 1 point à la chance
+19 : +12 % PX, bonus de 3 points aux jets contre les souffles
+20 : +14 % PX, bonus de 3 points aux jets contre les baguettes
+21 : +16 % PX, bonus de 4 points aux jets contre les souffles
+22 : +17 % PX, bonus de 4 points aux jets contre les baguettes
+23 : +18 % PX, bonus de 2 points à la chance
+24 : +19 % PX, bonus de 5 points aux jets contre les souffles
+25 : +20 % PX, bonus de 5 points aux jets contre les baguettes
+
+Bonus pour les bardes :
+13 : +1 emplacement de sort de niveau 1
+14 : +2 emplacements de sort de niveau 1
+15 : +1 emplacement de sort de niveau 2
+16 : +2 emplacements de sort de niveau 2
+17 : +1 emplacement de sort de niveau 3
+18 : +1 emplacement de sort de niveau 4
+19 : +2 emplacements de sort de niveau 3
+20 : +1 emplacement de sort de niveau 5
+21 : +2 emplacements de sort de niveau 4
+22 : +1 emplacement de sort de niveau 6
+23 : +2 emplacements de sort de niveau 5
+25 : +2 emplacements de sort de niveau 6
+
+Bonus pour les ensorceleurs :
+13 : +1 emplacement de sort de niveau 1
+14 : +2 emplacements de sort de niveau 1
+15 : +1 emplacement de sort de niveau 2
+17 : +2 emplacements de sort de niveau 2
+18 : +1 emplacement de sort de niveau 3
+20 : +2 emplacements de sort de niveau 3
+21 : +1 emplacement de sort de niveau 4
+23 : +2 emplacements de sort de niveau 4
+24 : +1 emplacement de sort de niveau 5
+~
+@20007   = ~CONSTITUTION : la constitution mesure la forme physique d'un personnage, sa santé et sa résistance physique à la douleur, aux blessures et aux maladies. Cette caractéristique est importante pour le rôdeur.
+
+Bonus :
+12 : minimum de 2/3 aux jets de points de vie
+14 : +1 point de vie par niveau
+16 : +2 points de vie par niveau
+17 : maximum des points de vie aux jets de points de vie
+18 : +3 points de vie par niveau (combattants seulement)
+19 : régénération lente (2 points de vie par heure)
+20 : +3 points de vie par niveau (combattants +4), régénération 1 pv/tour
+21 : +3 points de vie par niveau (combattants +4), régénération 2 pv/tour
+22 : +4 points de vie par niveau (combattants +5), régénération 1 pv/2 rounds
+23 : +4 points de vie par niveau (combattants +5), régénération 1 pv/round
+24 : +5 points de vie par niveau (combattants +6), régénération 2 pv/round
+25 : +5 points de vie par niveau (combattants +6), régénération 1 pv/seconde
+~
+@20008   = ~DEXTÉRITÉ : la dextérité mesure la coordination entre les mains et les yeux d'un personnage, son agilité, ses réflexes et son équilibre. C'est la première qualité exigée d'un voleur.
+
+Bonus :
+13 : -1 à la CA
+14 : -1 à la CA, +1 TAC0 à distance
+15 : -2 à la CA, +1 TAC0 à distance
+16 : -3 à la CA, +1 TAC0 à distance, +1 TAC0 en mêlée
+17 : -4 à la CA, +2 TAC0 à distance, +1 TAC0 en mêlée
+18 : -5 à la CA, +2 TAC0 à distance, +1 TAC0 en mêlée
+19 : -6 à la CA, +3 TAC0 à distance, +1 TAC0 en mêlée
+20 : -6 à la CA, +3 TAC0 à distance, +2 TAC0 en mêlée
+21 : -7 à la CA, +3 TAC0 à distance, +2 TAC0 en mêlée
+22 : -7 à la CA, +4 TAC0 à distance, +2 TAC0 en mêlée
+23 : -8 à la CA, +4 TAC0 à distance, +2 TAC0 en mêlée
+24 : -8 à la CA, +4 TAC0 à distance, +3 TAC0 en mêlée
+25 : -9 à la CA, +5 TAC0 à distance, +3 TAC0 en mêlée
+~
+@20010   = ~CONSTITUTION : la constitution mesure la forme physique d'un personnage, sa santé et sa résistance physique à la douleur, aux blessures et aux maladies. Cette caractéristique est importante pour le rôdeur.
+
+Bonus :
+12 : les combattants gagnent 1 point de vie par niveau
+14 : +1 point de vie par niveau (combattants +2)
+16 : +2 points de vie par niveau (combattants +3)
+18 : +3 points de vie par niveau (combattants +4)
+19 : régénération lente (2 points de vie par heure)
+20 : +4 pv/niveau (combattants +5), régénération 1 pv/tour
+21 : +4 pv/niveau (combattants +5), régénération 2 pv/tour
+22 : +5 pv/niveau (combattants +6), régénération 1 pv/2 rounds
+23 : +5 pv/niveau (combattants +6), régénération 1 pv/round
+24 : +6 pv/niveau (combattants +7), régénération 2 pv/round
+25 : +6 pv/niveau (combattants +8), régénération 1 pv/seconde
+~
+
+@20011   = ~HUMAINS : Les humains sont la race prédominante à Féérune. Ils règnent sur la plupart des empires et des royaumes importants des Royaumes Oubliés. À l'exception peut-être des petites-personnes, ils forment la race la plus sociable et la plus tolérante. Les humains peuvent prendre n'importe quelle classe. Leurs scores de caractéristiques vont de 7 à 18.~
+@20012   = ~NAINS : Les nains sont des êtres petits et trapus, facilement identifiables par leur taille et par leur physionomie. Ils ont les joues rubicondes, les yeux sombres et les cheveux foncés. Les nains ont tendance à être austères et taciturnes. Ils s'adonnent à des travaux pénibles et manquent d'humour. Ils aiment la bière, l'hydromel, et encore la bière, mais avant tout, ils aiment l'or. Il existe quatre races de nains au sein des Royaumes : les nains d'écu, les nains dorés, les nains sauvages et les duergars.
+
+Les nains disposent des traits suivants :
+- +1 en Constitution ; -1 en Dextérité ; -2 en Charisme.
+- Infravision.
+- +10 % en Crochetage, +15 % en Détection des pièges, +5 % en Détection des illusions, +10 % en Pose de pièges.
+- +3 aux jets de sauvegarde contre le poison / la mort.~
+@20013   = ~ELFES : Les elfes sont généralement plus petits et plus minces que les humains. Leurs traits sont fins et délicats, et ils s'expriment d'une voix mélodieuse. Ils sont considérés comme frivoles et distants. Les elfes aiment la beauté naturelle, la danse, les espiègleries et d'autres passe-temps similaires. Leur humour est plein d'intelligence, comme leurs chansons et leurs poèmes. Il existe six races d'elfes au sein des Royaumes : les elfes du soleil, les elfes de la lune, les elfes sauvages, les elfes aquatiques, les drows (drows) et les elfes ailés (avariels).
+
+Les elfes disposent des traits suivants :
+- +1 en Dextérité ; +1 en Intelligence ; -1 en Force ; -2 en Constitution.
+- 90 % de résistance aux charmes et au sommeil magique.
+- +1 au TAC0 avec les arcs, les épées longues et les épées courtes.
+- infravision.
+- +5 % en Crochetage, +5 % en Vol à la tire, +5 % en Furtivité, +10 % en Se cacher dans l'ombre.~
+@20014   = ~GNOMES : Apparentés aux nains, les gnomes sont sensiblement plus petits que leurs lointains cousins. Les gnomes, comme ils le clament avec fierté, sont également moins rondelets que les nains. La plupart ont le teint foncé ou la peau hâlée, des cheveux blancs et un nez relativement épaté. Les gnomes ont un sens de l'humour percutant et plein de malice, notamment pour les farces. Leur amour de la nature n'a d'égal que celui qu'ils portent aux gemmes et aux bijoux. Il existe deux races de gnomes au sein des Royaumes : les gnomes des roches et les gnomes des profondeurs (svirfneblines).
+
+Les gnomes disposent des traits suivants :
+- +1 en Intelligence ; +1 en Constitution ; -1 en Force ; -2 en Sagesse.
+- Infravision.
+- +5 % en Crochetage, +10 % en Détection des pièges, +5 % en Furtivité, +5 % pour Se cacher dans l'ombre, +10 % en Détection des illusions, +5 % en Pose de pièges.
+- +2 aux jets de sauvegarde contre les sorts.~
+@20015   = ~PETITES-PERSONNES : Les petites-personnes sont des gens de petite taille, généralement grassouillets, qui ressemblent beaucoup à de petits humains. Ils ont un visage rond et large, souvent rougeaud. Leurs cheveux sont normalement frisés et le dessus de leurs pieds est recouvert de poils. Dans l'ensemble, ils préfèrent le confort des maisons aux aventures dangereuses. Ils aiment la bonne vie, l'humour grivois et les histoires simples. Il existe trois races de petites-gens au sein des Royaumes : les pieds-légers, les grands et les vaillants.
+
+Les petites-personnes disposent des traits suivants :
+- +1 en Dextérité ; +1 en charisme ; -1 en Intelligence ; -2 en Force.
+- +1 au TAC0 avec les frondes.
+- +5 % en Crochetage, +5 % en Détection des pièges, +5 % en Vol à la tire, +10 % en Furtivité, +15 % pour Se cacher dans l'ombre.
+- +3 aux jets de sauvegarde contre le poison / la mort.~
+@20016   = ~DEMI-ELFES : Les demi-elfes sont un mélange d'humains et d'elfes. C'est un peuple doté d'une certaine beauté, qui a hérité des qualités des deux races dont il est issu. Les demi-elfes ont la curiosité, l'inventivité et l'ambition de leurs ancêtres humains, et le sens raffiné, l'amour de la nature et les goûts artistiques de leurs ancêtres elfiques.
+
+Les demi-elfes disposent des traits suivants :
+- +1 en Charisme, -1 en Sagesse.
+- 30 % de résistance aux charmes et au sommeil magique.
+- infravision.
+- +10 % en Vol à la tire, +5 % en Se cacher dans l'ombre.~
+@20017   = ~DEMI-ORQUES : Les demi-orques sont issus de l'union de parents humains et orques. Ils sont aussi grands que les humains, mais un peu plus lourds à cause de leur masse musculaire. Leur peau verdâtre, leur front fuyant, leurs mâchoires saillantes, leurs dents proéminentes et leur corps massif les rendent faciles à reconnaître. Les demi-orques sont tolérés sur la Côte des Épées car, contrairement au Nord, les habitants de ce royaume n'ont pas subi d'attaques orques depuis plusieurs siècles. Les demi-orques sont connus pour leur grande force.
+
+
+Les demi-orques bénéficient des traits suivants :
+- Infravision.
+- +1 en Force, -1 en Intelligence, -2 en Charisme.~
+@2021   = ~~
+@2022   = ~~
+@2023   = ~~
+@2024   = ~~
+@2090  = ~Compétence d'arme initiale~
+@2091  = ~Faire progresser la compétence d'arme~
+@2092  = ~Choisir une autre arme~
+// 2101-2524 unused
+@2101  = ~Progresser jusqu'à Initié (+) pour les épées bâtardes~
+@2102  = ~Progresser jusqu'à Initié (+) pour les épées longues~
+@2103  = ~Progresser jusqu'à Initié (+) pour les épées courtes~
+@2104  = ~Progresser jusqu'à Initié (+) pour les haches~
+@2105  = ~Progresser jusqu'à Initié (+) pour les épées à deux mains~
+@2106  = ~Progresser jusqu'à Initié (+) pour les katanas~
+@2107  = ~Progresser jusqu'à Initié (+) pour les cimeterres~
+@2108  = ~Progresser jusqu'à Initié (+) pour les dagues ~
+@2109  = ~Progresser jusqu'à Initié (+) pour les marteaux de guerre~
+@2110  = ~Progresser jusqu'à Initié (+) pour les lances~
+@2111  = ~Progresser jusqu'à Initié (+) pour les hallebardes~
+@2112  = ~Progresser jusqu'à Initié (+) pour les fléaux~
+@2113  = ~Progresser jusqu'à Initié (+) pour les masses~
+@2114  = ~Progresser jusqu'à Initié (+) pour les gourdins~
+@2115  = ~Progresser jusqu'à Initié (+) pour les bâtons~
+@2116  = ~Progresser jusqu'à Initié (+) pour les arbalètes~
+@2117  = ~Progresser jusqu'à Initié (+) pour les arcs longs~
+@2118  = ~Progresser jusqu'à Initié (+) pour les arcs courts~
+@2119  = ~Progresser jusqu'à Initié (+) pour les fléchettes~
+@2120  = ~Progresser jusqu'à Initié (+) pour les frondes~
+@2121  = ~Progresser jusqu'à Initié (+) dans le style à deux mains~
+@2122  = ~Progresser jusqu'à Initié (+) dans le style arme et bouclier~
+@2123  = ~Progresser jusqu'à Initié (+) dans le style combat à une main~
+@2124  = ~Progresser jusqu'à Initié (+) dans le style combat à deux armes~
+//
+@2201  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les épées bâtardes~
+@2202  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les épées longues~
+@2203  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les épées courtes~
+@2204  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les haches~
+@2205  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les épées à deux mains~
+@2206  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les katanas~
+@2207  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les cimeterres~
+@2208  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les dagues ~
+@2209  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les marteaux de guerre~
+@2210  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les lances~
+@2211  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les hallebardes~
+@2212  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les fléaux~
+@2213  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les masses~
+@2214  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les gourdins~
+@2215  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les bâtons~
+@2216  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les arbalètes~
+@2217  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les arcs longs~
+@2218  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les arcs courts~
+@2219  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les fléchettes~
+@2220  = ~Progresser jusqu'à Spécialiste (2 étoiles) pour les frondes~
+@2221  = ~Progresser jusqu'à Spécialiste (2 étoiles) dans le style à deux mains~
+@2222  = ~Progresser jusqu'à Spécialiste (2 étoiles) dans le style arme et bouclier~
+@2223  = ~Progresser jusqu'à Spécialiste (2 étoiles) dans le style combat à une main~
+@2224  = ~Progresser jusqu'à Spécialiste (2 étoiles) dans le style combat à deux armes~
+//
+@2301  = ~Progresser jusqu'à Maître (3 étoiles) pour les épées bâtardes~
+@2302  = ~Progresser jusqu'à Maître (3 étoiles) pour les épées longues~
+@2303  = ~Progresser jusqu'à Maître (3 étoiles) pour les épées courtes~
+@2304  = ~Progresser jusqu'à Maître (3 étoiles) pour les haches~
+@2305  = ~Progresser jusqu'à Maître (3 étoiles) pour les épées à deux mains~
+@2306  = ~Progresser jusqu'à Maître (3 étoiles) pour les katanas~
+@2307  = ~Progresser jusqu'à Maître (3 étoiles) pour les cimeterres~
+@2308  = ~Progresser jusqu'à Maître (3 étoiles) pour les dagues ~
+@2309  = ~Progresser jusqu'à Maître (3 étoiles) pour les marteaux de guerre~
+@2310  = ~Progresser jusqu'à Maître (3 étoiles) pour les lances~
+@2311  = ~Progresser jusqu'à Maître (3 étoiles) pour les hallebardes~
+@2312  = ~Progresser jusqu'à Maître (3 étoiles) pour les fléaux~
+@2313  = ~Progresser jusqu'à Maître (3 étoiles) pour les masses~
+@2314  = ~Progresser jusqu'à Maître (3 étoiles) pour les gourdins~
+@2315  = ~Progresser jusqu'à Maître (3 étoiles) pour les bâtons~
+@2316  = ~Progresser jusqu'à Maître (3 étoiles) pour les arbalètes~
+@2317  = ~Progresser jusqu'à Maître (3 étoiles) pour les arcs longs~
+@2318  = ~Progresser jusqu'à Maître (3 étoiles) pour les arcs courts~
+@2319  = ~Progresser jusqu'à Maître (3 étoiles) pour les fléchettes~
+@2320  = ~Progresser jusqu'à Maître (3 étoiles) pour les frondes~
+@2321  = ~Progresser jusqu'à Maître (3 étoiles) dans le style à deux mains~
+@2322  = ~Progresser jusqu'à Maître (3 étoiles) dans le style arme et bouclier~
+@2323  = ~Progresser jusqu'à Maître (3 étoiles) dans le style combat à une main~
+@2324  = ~Progresser jusqu'à Maître (3 étoiles) dans le style combat à deux armes~
+//
+@2401  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les épées bâtardes~
+@2402  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les épées longues~
+@2403  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les épées courtes~
+@2404  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les haches~
+@2405  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les épées à deux mains~
+@2406  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les katanas~
+@2407  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les cimeterres~
+@2408  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les dagues ~
+@2409  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les marteaux de guerre~
+@2410  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les lances~
+@2411  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les hallebardes~
+@2412  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les fléaux~
+@2413  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les masses~
+@2414  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les gourdins~
+@2415  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les bâtons~
+@2416  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les arbalètes~
+@2417  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les arcs longs~
+@2418  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les arcs courts~
+@2419  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les fléchettes~
+@2420  = ~Progresser jusqu'à Supérieur (4 étoiles) pour les frondes~
+@2421  = ~Progresser jusqu'à Supérieur (4 étoiles) dans le style à deux mains~
+@2422  = ~Progresser jusqu'à Supérieur (4 étoiles) dans le style arme et bouclier~
+@2423  = ~Progresser jusqu'à Supérieur (4 étoiles) dans le style combat à une main~
+@2424  = ~Progresser jusqu'à Supérieur (4 étoiles) dans le style combat à deux armes~
+//
+@2501  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les épées bâtardes~
+@2502  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les épées longues~
+@2503  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les épées courtes~
+@2504  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les haches~
+@2505  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les épées à deux mains~
+@2506  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les katanas~
+@2507  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les cimeterres~
+@2508  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les dagues ~
+@2509  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les marteaux de guerre~
+@2510  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les lances~
+@2511  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les hallebardes~
+@2512  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les fléaux~
+@2513  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les masses~
+@2514  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les gourdins~
+@2515  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les bâtons~
+@2516  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les arbalètes~
+@2517  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les arcs longs~
+@2518  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les arcs courts~
+@2519  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les fléchettes~
+@2520  = ~Progresser jusqu'à Grand Maître (5 étoiles) pour les frondes~
+@2521  = ~Progresser jusqu'à Grand Maître (5 étoiles) dans le style à deux mains~
+@2522  = ~Progresser jusqu'à Grand Maître (5 étoiles) dans le style arme et bouclier~
+@2523  = ~Progresser jusqu'à Grand Maître (5 étoiles) dans le style combat à une main~
+@2524  = ~Progresser jusqu'à Grand Maître (5 étoiles) dans le style combat à deux armes~
+//unused
+@2632  = ~Sélectionner une arme de prédilection~
+//unused
+@2648  = ~KENSAI :Aussi connu sous le nom de "Seigneur de l'épée" dans la langue commune, le Kensai est un guerrier entraîné à ne faire plus qu'un avec son arme. Il est d'une terrible efficacité, rapide et entraîné pour combattre sans être encombré d'une armure. (Remarque : malgré son surnom de seigneur de l'épée, un Kensai peut utiliser n'importe quelle arme de corps-à-corps dont il a appris le maniement).
+
+REMARQUE :La sélection des points de compétence à la création du personnage n'a que peu d'importance. Quand vous choisissez une arme de prédilection, vous commencerez le jeu avec une spécialisation dans cette arme et dans les styles de combat à une arme, à deux armes et en armes à deux mains.
+
+Avantages :
+- Bonus de +1/2 attaque par round.
+- Bonus de 1 point aux jets de dégâts tous les 4 niveaux.
+- Bonus de 1 point à la classe d'armure tous les 6 niveaux (en commençant au niveau 1).
+- Bonus de 1 point au facteur de vitesse tous les 10 niveaux.
+- Peut utiliser la capacité « Kaï » une fois par jour au niveau 1 et deux fois de plus tous les 10 niveaux au-delà.
+
+KAÏ : Cette capacité dure 10 secondes et toutes ses attaques, pendant cette période, infligent le maximum de dégâts.
+
+Inconvénients :
+- Ne peut porter d'armure.
+- Ne peut utiliser d'armes à distance.
+- Ne peut pas jumeler vers une autre classe.
+~

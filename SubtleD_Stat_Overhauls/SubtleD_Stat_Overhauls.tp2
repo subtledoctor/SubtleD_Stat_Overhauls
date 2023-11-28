@@ -55,7 +55,11 @@ LANGUAGE
   ~polish~
   ~SubtleD_Stat_Overhauls/lang/en_US/setup.tra~
   ~SubtleD_Stat_Overhauls/lang/pl_PL/setup.tra~
-
+LANGUAGE
+  ~Francais~
+  ~french~
+  ~SubtleD_Stat_Overhauls/lang/en_US/setup.tra~
+  ~SubtleD_Stat_Overhauls/lang/fr_FR/setup.tra~
 
 //__________________________________________________________________________________
 //__________________________________________________________________________________
