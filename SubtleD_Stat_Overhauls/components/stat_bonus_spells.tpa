@@ -6,10 +6,12 @@
 //__________________________________________________________________________________
 //__________________________________________________________________________________
 
+
 // -----------------------------
 // ABILITY SCORE BONUS SPELLS
 // -----------------------------
 
+// ***** zero out MXSPLWIS, use this method for all priests - and paladins and rangers, too
 
 DEFINE_ACTION_FUNCTION ability_bonus_spells BEGIN 
 
@@ -581,6 +583,18 @@ END
 ACTION_IF FILE_EXISTS_IN_GAME ~clabshgs.2da~ BEGIN
 	APPEND ~clabshgs.2da~ ~XTRA_SPL    AP_D5ABSP4  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
 END
+ACTION_IF FILE_EXISTS_IN_GAME ~clabpr01.2da~ BEGIN
+	APPEND ~clabpr01.2da~ ~XTRA_SPL    AP_D5ABSP4  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+END
+ACTION_IF FILE_EXISTS_IN_GAME ~clabdr01.2da~ BEGIN
+	APPEND ~clabdr01.2da~ ~XTRA_SPL    AP_D5ABSP4  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+END
+ACTION_IF FILE_EXISTS_IN_GAME ~clabpa01.2da~ BEGIN
+	APPEND ~clabpa01.2da~ ~XTRA_SPL    AP_D5ABSP4  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+END
+ACTION_IF FILE_EXISTS_IN_GAME ~clabrn01.2da~ BEGIN
+	APPEND ~clabrn01.2da~ ~XTRA_SPL    AP_D5ABSP4  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+END
 
 COPY_EXISTING ~kitlist.2da~ ~override~
 //  COUNT_2DA_COLS cols
@@ -589,7 +603,7 @@ COPY_EXISTING ~kitlist.2da~ ~override~
 	READ_2DA_ENTRY %row% 1 10 modname
 	READ_2DA_ENTRY %row% 5 10 modclab
 	READ_2DA_ENTRY %row% 8 10 modclass
-	PATCH_IF (%modclass% = 21) BEGIN	// shaman kits
+	PATCH_IF (%modclass% = 21) OR (%modclass% = 3) OR (%modclass% = 11) OR (%modclass% = 6) OR (%modclass% = 12) BEGIN	// divine kits
 	  INNER_ACTION BEGIN
 		APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ABSP4  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
 	  END

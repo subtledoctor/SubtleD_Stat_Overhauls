@@ -33,17 +33,47 @@ COPY ~%MOD_FOLDER%/data/stats/hpwiz.2da~ ~override~
 //___________________________________________________________________________________
 
 
-//ADD A FEW HP TO NPCs_______________________________________________________________
+//ADD HP TO NPCs_______________________________________________________________
 //
-COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
-	PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
-		READ_LONG 0x1cc biography
-		PATCH_IF (biography > 0 && biography < 2147483647) BEGIN // party-joinable NPC
-			LPF ADD_CRE_EFFECT INT_VAR opcode=17 target=1 timing=1 power=1 paramater1=4 parameter2=0 END
-			LPF ADD_CRE_EFFECT INT_VAR opcode=18 target=1 timing=9 power=1 paramater1=4 parameter2=0 END
-		END
-	END
-BUT_ONLY
+LAM JOINABLE_NPC_ARRAYS
+
+ACTION_PHP_EACH JOINABLE_NPC_ARRAY AS cre => dv BEGIN
+//  PRINT ~%cre% = non-joinable~ 
+  COPY_EXISTING ~%cre%~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+        READ_SHORT 0x24 curhp
+        PATCH_IF (curhp > 1) AND (curhp < 42) BEGIN
+          WRITE_SHORT 0x24 (curhp + 4)
+        END
+        READ_SHORT 0x26 maxhp
+        PATCH_IF (maxhp > 1) AND (maxhp < 42) BEGIN
+          WRITE_SHORT 0x24 (maxhp + 4)
+        END
+//        LPF ADD_CRE_EFFECT INT_VAR opcode=17 target=1 timing=1 power=1 paramater1=4 parameter2=0 END
+//        LPF ADD_CRE_EFFECT INT_VAR opcode=18 target=1 timing=9 power=1 paramater1=4 parameter2=0 END
+    END
+  BUT_ONLY
+END
+ACTION_PHP_EACH NON_JOINABLE_NPC_ARRAY AS cre => dv BEGIN
+//  PRINT ~%cre% = non-joinable~ 
+  COPY_EXISTING ~%cre%~ ~override~
+    PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
+      READ_LONG 0x28 animation
+      PATCH_IF !(animation = 0xc300) AND !(animation = 0xcc04) BEGIN
+        READ_SHORT 0x24 curhp
+        PATCH_IF (curhp > 1) AND (curhp < 25) BEGIN
+          WRITE_SHORT 0x24 (curhp + 5)
+        END
+        READ_SHORT 0x26 maxhp
+        PATCH_IF (maxhp > 1) AND (maxhp < 25) BEGIN
+          WRITE_SHORT 0x24 (maxhp + 5)
+        END
+//        LPF ADD_CRE_EFFECT INT_VAR opcode=17 target=1 timing=1 power=1 paramater1=4 parameter2=0 END
+//        LPF ADD_CRE_EFFECT INT_VAR opcode=18 target=1 timing=9 power=1 paramater1=4 parameter2=0 END        
+      END
+    END
+  BUT_ONLY
+END
 //___________________________________________________________________________________
 
 END // end function

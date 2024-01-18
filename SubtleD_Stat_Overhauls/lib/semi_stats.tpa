@@ -1,5 +1,5 @@
 
-// v11.3
+// v12 - handle WIS slots better
 
 /*
 
@@ -127,6 +127,7 @@ END
 */
 
 ACTION_IF (5e_int_bonus_memorization = 0) BEGIN
+ ACTION_IF (FILE_EXISTS_IN_GAME ~d5absp1.spl~) BEGIN
   COPY_EXISTING ~d5zzini.spl~ ~override~
 //  LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 146 target = 1 parameter2 = 1 timing = 1 STR_VAR resource = ~d5nabsw~ END
 	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5abspb~ END
@@ -153,6 +154,7 @@ ACTION_IF (5e_int_bonus_memorization = 0) BEGIN
 	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 206 target = 1 parameter1 = (0 - 1) timing = 9 STR_VAR resource = ~d5abspb~ END
 	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 146 target = 1 parameter2 = 1 timing = 1 STR_VAR resource = ~d5zislt~ END
 	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 146 target = 1 parameter2 = 1 timing = 1 STR_VAR resource = ~d5zjslt~ END
+ END
 END
 
 COPY ~%MOD_FOLDER%/lib/semi_spont/d5_base.spl~ ~override/d5intbz.spl~
@@ -515,7 +517,7 @@ END		//	end define function
 
 DEFINE_ACTION_MACRO semi_wis_slots BEGIN
 
-ACTION_IF !(VARIABLE_IS_SET %5e_int_bonus_memorization%)  BEGIN
+ACTION_IF !(VARIABLE_IS_SET %5e_wis_bonus_memorization%)  BEGIN
   OUTER_SET 5e_wis_bonus_memorization = 0
 END
 
@@ -593,6 +595,32 @@ ACTION_IF !(FILE_EXISTS_IN_GAME ~d5__semi_wis.d5~) BEGIN
 
 // stat-based bonus spells____________________________________________________________
 //
+
+ACTION_IF (5e_wis_bonus_memorization = 0) BEGIN
+ ACTION_IF (FILE_EXISTS_IN_GAME ~d5absp4.spl~) BEGIN
+  COPY_EXISTING ~d5zzini.spl~ ~override~
+//  LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 146 target = 1 parameter2 = 1 timing = 1 STR_VAR resource = ~d5nabsh~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5abspb~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5wishl~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5wishm~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5wishn~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5wisho~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5wishp~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5wishq~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5wishr~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5wishs~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5wisht~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5wishu~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5wishv~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5wishw~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5wishx~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 1 STR_VAR resource = ~d5wishy~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 206 target = 1 parameter1 = (0 - 1) timing = 9 STR_VAR resource = ~d5absp4~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 9 STR_VAR resource = ~d5absp4~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 206 target = 1 parameter1 = (0 - 1) timing = 9 STR_VAR resource = ~d5absph~ END
+	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 9 STR_VAR resource = ~d5absph~ END
+ END
+END
 
 //OUTER_SET string = RESOLVE_STR_REF(~something is happening...~)
 

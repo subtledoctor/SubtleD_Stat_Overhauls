@@ -1,7 +1,7 @@
 BACKUP ~weidu_external/backup/SubtleD_Stat_Overhauls~
 AUTHOR ~SubtleD~
 
-VERSION ~v1.3.2~
+VERSION ~v1.5.1~
 
 ALWAYS
 
@@ -92,6 +92,8 @@ ACTION_IF (FILE_EXISTS_IN_GAME ~d5fpspt.spl~) BEGIN
   LAM semi_wis_slots
 END
 
+COPY ~%MOD_FOLDER%/data/stats/mxsplwis_0.2da~ ~override/mxsplwis.2da~
+
 //__________________________________________________________________________________
 
 BEGIN @121 // stat-based bonus memorization slots AND casting slots for 5E casters
@@ -114,6 +116,7 @@ ACTION_IF (FILE_EXISTS_IN_GAME ~d5zzini.spl~) AND (MOD_IS_INSTALLED ~SubtleD_Sta
  END
 
  ACTION_IF (FILE_EXISTS_IN_GAME ~d5__5E_casting_divine.d5~) BEGIN
+  OUTER_SET 5e_wis_bonus_memorization = 1
   OUTER_SET 5e_wis_bonus_casting = 1
   LAM semi_wis_slots  
  END
@@ -138,9 +141,8 @@ ACTION_IF (MOD_IS_INSTALLED ~SubtleD_Stat_Overhauls.tp2~ ~110~) BEGIN
       LAM semi_int_slots
     END
     ACTION_IF (FILE_EXISTS_IN_GAME ~d5__5E_casting_divine.d5~) BEGIN
-      OUTER_SET 5e_wis_bonus_casting = 1
+      OUTER_SET 5e_wis_bonus_memorization = 0
       LAM semi_wis_slots
-      LAF 5e_no_priest_mem_bonus END
     END
   END
 END
@@ -152,10 +154,11 @@ ACTION_IF !(MOD_IS_INSTALLED ~SubtleD_Stat_Overhauls.tp2~ ~110~) BEGIN
       LAM semi_int_slots
     END
     ACTION_IF (FILE_EXISTS_IN_GAME ~d5__5E_casting_divine.d5~) BEGIN
+      OUTER_SET 5e_wis_bonus_memorization = 0
       OUTER_SET 5e_wis_bonus_casting = 1
       LAM semi_wis_slots
-      COPY ~scales_of_balance/stats/mxsplwis_0.2da~ ~override/mxsplwis.2da~
     END
+    COPY ~%MOD_FOLDER%/stats/mxsplwis_0.2da~ ~override/mxsplwis.2da~
   END
 END
 //__________________________________________________________________________________
