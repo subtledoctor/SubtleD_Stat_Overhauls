@@ -836,7 +836,7 @@ ACTION_PHP_EACH NON_JOINABLE_NPC_ARRAY AS cre => dv BEGIN
 	  PATCH_IF (charisma > 8) AND (charisma < 12) BEGIN
 		WRITE_BYTE 0x23e 12
 	  END
-	  LPF ADD_CRE_EFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 9 resist_dispel = 0 STR_VAR resource = ~D5_STATS~ END
+//	  LPF ADD_CRE_EFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 9 resist_dispel = 0 STR_VAR resource = ~D5_STATS~ END
 	END
   BUT_ONLY
 END
