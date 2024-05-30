@@ -441,27 +441,29 @@ COPY_EXISTING ~kitlist.2da~ ~override~
 	READ_2DA_ENTRY %row% 1 10 modname
 	READ_2DA_ENTRY %row% 5 10 modclab
 	READ_2DA_ENTRY %row% 8 10 modclass
-	PATCH_IF (%modclass% = 1) AND !(~%modname%~ STRING_MATCHES_REGEXP ~C0SA+~ = 0) AND !(~%modclab%~ STRING_EQUAL_CASE ~D5ACNST~) AND !(~%modclab%~ STRING_EQUAL_CASE ~D5_MANA~) BEGIN	// mage kits
-	  INNER_ACTION BEGIN
-		APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ABSP1  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+    PATCH_IF (FILE_EXISTS_IN_GAME ~%modclab%.2da~) BEGIN
+	  PATCH_IF (%modclass% = 1) AND !(~%modname%~ STRING_MATCHES_REGEXP ~C0SA+~ = 0) AND !(~%modclab%~ STRING_EQUAL_CASE ~D5ACNST~) AND !(~%modclab%~ STRING_EQUAL_CASE ~D5_MANA~) BEGIN	// mage kits
+	    INNER_ACTION BEGIN
+		  APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ABSP1  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+	    END
 	  END
-	END
-	PATCH_IF (%modclass% = 5) AND !(~%modname%~ STRING_MATCHES_REGEXP ~C0SA+~ = 0) BEGIN 	// bard kits
-	  INNER_ACTION BEGIN
-		APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ABSP2  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+	  PATCH_IF (%modclass% = 5) AND !(~%modname%~ STRING_MATCHES_REGEXP ~C0SA+~ = 0) BEGIN 	// bard kits
+	    INNER_ACTION BEGIN
+		  APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ABSP2  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+	    END
 	  END
-	END
-	PATCH_IF (%modclass% = 19) AND !(~%modname%~ STRING_MATCHES_REGEXP ~C0SA+~ = 0) BEGIN 	// sorcerer kits
-	  INNER_ACTION BEGIN
-		APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ABSP3  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+	  PATCH_IF (%modclass% = 19) AND !(~%modname%~ STRING_MATCHES_REGEXP ~C0SA+~ = 0) BEGIN 	// sorcerer kits
+	    INNER_ACTION BEGIN
+		  APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ABSP3  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+	    END
 	  END
-	END
-	PATCH_IF (%modclass% = 1) OR (%modclass% = 5) OR (%modclass% = 19) OR (%modclass% = 7) OR (%modclass% = 10) OR (%modclass% = 13) OR (%modclass% = 14) OR (%modclass% = 17) BEGIN
-	  PATCH_IF (~%modname%~ STRING_MATCHES_REGEXP ~C0SA+~ = 0) BEGIN	// shadow adept arcane kits
-		INNER_ACTION BEGIN
-		  APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ZISLT  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
-		  APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ZJSLT  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
-		END
+	  PATCH_IF (%modclass% = 1) OR (%modclass% = 5) OR (%modclass% = 19) OR (%modclass% = 7) OR (%modclass% = 10) OR (%modclass% = 13) OR (%modclass% = 14) OR (%modclass% = 17) BEGIN
+	    PATCH_IF (~%modname%~ STRING_MATCHES_REGEXP ~C0SA+~ = 0) BEGIN	// shadow adept arcane kits
+		  INNER_ACTION BEGIN
+		    APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ZISLT  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+		    APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ZJSLT  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+		  END
+	    END
 	  END
 	END
   END
@@ -815,10 +817,13 @@ DEFINE_ACTION_FUNCTION 5e_no_priest_mem_bonus BEGIN
 	  READ_2DA_ENTRY %row% 5 10 modclab
 	  READ_2DA_ENTRY %row% 8 10 modclass
 	  PATCH_IF (%modclass% = 3) OR (%modclass% = 11) BEGIN	// priest kits
-	    PATCH_IF !(~%modname%~ STRING_MATCHES_REGEXP ~C0SA+~ = 0) AND !(~%modname%~ STRING_EQUAL_CASE ~~) BEGIN	// shadow adept arcane kits
-	      INNER_ACTION BEGIN
-		    APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ABSP5  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+	    PATCH_IF (FILE_EXISTS_IN_GAME ~%modclab%.2da~) BEGIN
+	      PATCH_IF !(~%modname%~ STRING_MATCHES_REGEXP ~C0SA+~ = 0) AND !(~%modname%~ STRING_EQUAL_CASE ~~) BEGIN	// shadow adept arcane kits
+	        INNER_ACTION BEGIN
+		      APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ABSP5  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+	        END
 	      END
+	    END
 	  END
     END
   BUT_ONLY
