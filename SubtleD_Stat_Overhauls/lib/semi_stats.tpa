@@ -619,6 +619,7 @@ ACTION_IF (5e_wis_bonus_memorization = 0) BEGIN
 	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 9 STR_VAR resource = ~d5absp4~ END
 	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 206 target = 1 parameter1 = (0 - 1) timing = 9 STR_VAR resource = ~d5absph~ END
 	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 4 opcode = 321 target = 1 timing = 9 STR_VAR resource = ~d5absph~ END
+  IF_EXISTS
  END
 END
 
