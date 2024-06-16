@@ -1,7 +1,7 @@
 BACKUP ~weidu_external/backup/SubtleD_Stat_Overhauls~
 AUTHOR ~SubtleD~
 
-VERSION ~v1.5.7~
+VERSION ~v1.6.1~
 
 ALWAYS
 
@@ -235,6 +235,24 @@ INCLUDE ~%MOD_FOLDER%/lib/save_list_base.tpa~
 INCLUDE ~%MOD_FOLDER%/components/saving_throws.tpa~
 
 LAF revise_saving_throws END
+//__________________________________________________________________________________
+
+
+
+//__________________________________________________________________________________
+//__________________________________________________________________________________
+//
+//							DUAL CLASS REQUIREMENTS
+//__________________________________________________________________________________
+//__________________________________________________________________________________
+
+BEGIN @180 // dual class rebalance
+DESIGNATED 180
+LABEL ~D5_REVISED_DUAL_CLASS_REQS~
+
+INCLUDE ~%MOD_FOLDER%/components/lower_dc_req.tpa~
+
+LAF lower_dualclass_requirements END
 //__________________________________________________________________________________
 
 
