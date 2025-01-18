@@ -1,7 +1,7 @@
 BACKUP ~weidu_external/backup/SubtleD_Stat_Overhauls~
 AUTHOR ~SubtleD~
 
-VERSION ~v1.6.4~
+VERSION ~v1.7~
 
 ALWAYS
 
@@ -10,6 +10,15 @@ ALWAYS
 	INCLUDE ~%MOD_FOLDER%/lib/fl#add_kit_ee.tpa~
 
 	LAF fix_kitlist_missing_ids END
+
+	ACTION_IF (FILE_EXISTS_IN_GAME ~d5_stat_settings.ini~) BEGIN
+  	  INCLUDE ~override/d5_stat_settings.ini~
+  	END
+
+	ACTION_IF !(FILE_EXISTS_IN_GAME ~d5_stat_settings.ini~) BEGIN
+	  COPY ~SubtleD_Stat_Overhauls/d5_stat_settings.ini~ ~override~
+  	  INCLUDE ~override/d5_stat_settings.ini~
+	END
 
 // joinable NPC issues for tutu/bgt/eet:
   ACTION_IF GAME_IS ~bgee~ BEGIN

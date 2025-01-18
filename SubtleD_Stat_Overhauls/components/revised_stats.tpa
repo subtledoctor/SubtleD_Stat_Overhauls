@@ -17,6 +17,11 @@ COPY ~%MOD_FOLDER%/lib/d5_marker.d5~ ~override/d5__stats.d5~
 //CHECK SETTINGS_____________________________________________________________________
 //
 INCLUDE ~%MOD_FOLDER%/ini/stats.ini~
+
+LAM race_stats
+LAM which_stats
+LAM int_profs
+LAM xp_boost
 //___________________________________________________________________________________
 
 
@@ -527,69 +532,93 @@ ACTION_IF (change_CHA > 0) BEGIN
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 36 parameter1 = (0 - 1) parameter2 = 0 target = 1 timing = 0 duration = 7 END
   COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5cha14.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5cha14~ END
-	LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 102 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	PATCH_IF (%d5_xp_boost% = 1) BEGIN
+	  LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 102 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	END
   COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5cha15.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5cha15~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 36 parameter1 = 1 parameter2 = 0 target = 1 timing = 0 duration = 7 END
-	LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 104 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	PATCH_IF (%d5_xp_boost% = 1) BEGIN
+	  LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 104 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	END
   COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5cha16.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5cha16~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 36 parameter1 = 1 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 34 parameter1 = 1 parameter2 = 0 target = 1 timing = 0 duration = 7 END
-	LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 106 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	PATCH_IF (%d5_xp_boost% = 1) BEGIN
+	  LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 106 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	END
   COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5cha17.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5cha17~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 36 parameter1 = 2 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 34 parameter1 = 1 parameter2 = 0 target = 1 timing = 0 duration = 7 END
-	LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 108 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	PATCH_IF (%d5_xp_boost% = 1) BEGIN
+	  LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 108 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	END
   COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5cha18.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5cha18~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 36 parameter1 = 2 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 34 parameter1 = 2 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 22 parameter1 = 1 parameter2 = 0 target = 1 timing = 0 duration = 7 END
-	LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 110 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	PATCH_IF (%d5_xp_boost% = 1) BEGIN
+	  LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 110 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	END
   COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5cha19.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5cha19~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 36 parameter1 = 3 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 34 parameter1 = 2 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 22 parameter1 = 1 parameter2 = 0 target = 1 timing = 0 duration = 7 END
-	LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 112 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	PATCH_IF (%d5_xp_boost% = 1) BEGIN
+	  LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 112 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	END
   COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5cha20.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5cha20~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 36 parameter1 = 3 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 34 parameter1 = 3 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 22 parameter1 = 1 parameter2 = 0 target = 1 timing = 0 duration = 7 END
-	LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 114 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	PATCH_IF (%d5_xp_boost% = 1) BEGIN
+	  LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 114 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	END
   COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5cha21.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5cha21~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 36 parameter1 = 4 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 34 parameter1 = 3 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 22 parameter1 = 1 parameter2 = 0 target = 1 timing = 0 duration = 7 END
-	LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 116 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	PATCH_IF (%d5_xp_boost% = 1) BEGIN
+	  LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 116 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	END
   COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5cha22.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5cha22~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 36 parameter1 = 4 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 34 parameter1 = 4 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 22 parameter1 = 1 parameter2 = 0 target = 1 timing = 0 duration = 7 END
-	LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 117 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	PATCH_IF (%d5_xp_boost% = 1) BEGIN
+	  LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 117 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	END
   COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5cha23.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5cha23~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 36 parameter1 = 4 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 34 parameter1 = 4 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 22 parameter1 = 2 parameter2 = 0 target = 1 timing = 0 duration = 7 END
-	LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 118 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	PATCH_IF (%d5_xp_boost% = 1) BEGIN
+	  LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 118 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	END
   COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5cha24.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5cha24~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 36 parameter1 = 5 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 34 parameter1 = 4 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 22 parameter1 = 2 parameter2 = 0 target = 1 timing = 0 duration = 7 END
-	LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 119 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	PATCH_IF (%d5_xp_boost% = 1) BEGIN
+	  LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 119 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	END
   COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5cha25.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5cha25~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 36 parameter1 = 5 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 34 parameter1 = 5 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 22 parameter1 = 2 parameter2 = 0 target = 1 timing = 0 duration = 7 END
-	LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 120 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	PATCH_IF (%d5_xp_boost% = 1) BEGIN
+	  LPF ADD_SPELL_EFFECT INT_VAR opcode = 104 parameter1 = 120 parameter2 = 2 target = 1 timing = 0 duration = 9 END
+	END
 END
 //__________________________________________________________________________________
 
@@ -824,17 +853,85 @@ ACTION_PHP_EACH NON_JOINABLE_NPC_ARRAY AS cre => dv BEGIN
 	  PATCH_IF (dexterity > 8) AND (dexterity < 12) BEGIN
 		WRITE_BYTE 0x23c 12
 	  END
+	  PATCH_IF (dexterity > 15) AND (dexterity < 19) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 278 target = 1 parameter1 = 1 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
+	  PATCH_IF (dexterity > 18) AND (dexterity < 23) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 278 target = 1 parameter1 = 2 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
+	  PATCH_IF (dexterity > 22) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 278 target = 1 parameter1 = 3 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
 	  PATCH_IF (constitution > 8) AND (constitution < 12) BEGIN
 		WRITE_BYTE 0x23d 12
 	  END
 	  PATCH_IF (intelligence > 8) AND (intelligence < 12) BEGIN
 		WRITE_BYTE 0x23a 12
 	  END
+	  PATCH_IF (intelligence > 14) AND (intelligence < 17) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 37 target = 1 parameter1 = 1 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
+	  PATCH_IF (intelligence > 16) AND (intelligence < 19) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 37 target = 1 parameter1 = 2 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
+	  PATCH_IF (intelligence > 18) AND (intelligence < 21) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 37 target = 1 parameter1 = 3 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
+	  PATCH_IF (intelligence > 20) AND (intelligence < 23) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 37 target = 1 parameter1 = 4 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
+	  PATCH_IF (intelligence > 22) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 37 target = 1 parameter1 = 5 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
 	  PATCH_IF (wisdom > 8) AND (wisdom < 12) BEGIN
 		WRITE_BYTE 0x23b 12
 	  END
+	  PATCH_IF (wisdom > 15) AND (wisdom < 18) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 33 target = 1 parameter1 = 1 parameter2 = 0 timing = 0 duration = 126144000 END
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 35 target = 1 parameter1 = 1 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
+	  PATCH_IF (wisdom > 17) AND (wisdom < 20) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 33 target = 1 parameter1 = 2 parameter2 = 0 timing = 0 duration = 126144000 END
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 35 target = 1 parameter1 = 2 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
+	  PATCH_IF (wisdom > 19) AND (wisdom < 22) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 33 target = 1 parameter1 = 3 parameter2 = 0 timing = 0 duration = 126144000 END
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 35 target = 1 parameter1 = 3 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
+	  PATCH_IF (wisdom > 21) AND (wisdom < 24) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 33 target = 1 parameter1 = 4 parameter2 = 0 timing = 0 duration = 126144000 END
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 35 target = 1 parameter1 = 4 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
+	  PATCH_IF (wisdom > 23) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 33 target = 1 parameter1 = 5 parameter2 = 0 timing = 0 duration = 126144000 END
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 35 target = 1 parameter1 = 5 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
 	  PATCH_IF (charisma > 8) AND (charisma < 12) BEGIN
 		WRITE_BYTE 0x23e 12
+	  END
+	  PATCH_IF (charisma > 14) AND (charisma < 17) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 34 target = 1 parameter1 = 1 parameter2 = 0 timing = 0 duration = 126144000 END
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 36 target = 1 parameter1 = 1 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
+	  PATCH_IF (charisma > 16) AND (charisma < 19) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 34 target = 1 parameter1 = 2 parameter2 = 0 timing = 0 duration = 126144000 END
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 36 target = 1 parameter1 = 2 parameter2 = 0 timing = 0 duration = 126144000 END
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 22 target = 1 parameter1 = 1 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
+	  PATCH_IF (charisma > 19) AND (charisma < 21) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 34 target = 1 parameter1 = 3 parameter2 = 0 timing = 0 duration = 126144000 END
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 36 target = 1 parameter1 = 3 parameter2 = 0 timing = 0 duration = 126144000 END
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 22 target = 1 parameter1 = 1 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
+	  PATCH_IF (charisma > 20) AND (charisma < 24) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 34 target = 1 parameter1 = 4 parameter2 = 0 timing = 0 duration = 126144000 END
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 36 target = 1 parameter1 = 4 parameter2 = 0 timing = 0 duration = 126144000 END
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 22 target = 1 parameter1 = 2 parameter2 = 0 timing = 0 duration = 126144000 END
+	  END
+	  PATCH_IF (charisma > 23) BEGIN
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 34 target = 1 parameter1 = 5 parameter2 = 0 timing = 0 duration = 126144000 END
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 36 target = 1 parameter1 = 5 parameter2 = 0 timing = 0 duration = 126144000 END
+		LPF ADD_CRE_EFFECT INT_VAR opcode = 22 target = 1 parameter1 = 2 parameter2 = 0 timing = 0 duration = 126144000 END
 	  END
 //	  LPF ADD_CRE_EFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 9 resist_dispel = 0 STR_VAR resource = ~D5_STATS~ END
 	END
