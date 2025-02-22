@@ -1,7 +1,7 @@
 BACKUP ~weidu_external/backup/SubtleD_Stat_Overhauls~
 AUTHOR ~SubtleD~
 
-VERSION ~v1.7~
+VERSION ~v1.8~
 
 ALWAYS
 
@@ -185,15 +185,13 @@ INCLUDE ~%MOD_FOLDER%/components/2h_strength.tpa~
 LAF 2hand_weapon_strength END
 //__________________________________________________________________________________
 
-BEGIN @140 // add concentration checks
+BEGIN @140 // plinkification
 DESIGNATED 140
-LABEL ~D5_CONCENTRATION_CHECKS~
-REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet~ @8
-DEPRECATED @6
+LABEL ~D5_PLINKIFICATION~
 
-INCLUDE ~%MOD_FOLDER%/components/concentration.tpa~
+INCLUDE ~%MOD_FOLDER%/components/plinkification.tpa~
 
-LAF enable_concentration_checks END
+LAF plinkify END
 //__________________________________________________________________________________
 
 BEGIN @151 // constitution/hit dice rebalance - normal

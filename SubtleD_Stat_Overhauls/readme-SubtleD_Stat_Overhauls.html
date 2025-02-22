@@ -9,7 +9,7 @@
 <body>
 <h1>Subtle Mods: SubtleD's Stat Overhauls (Stats of Balance)</h1>
 <div class="section">
-  <p><strong> Version 1.7 </strong><br />
+  <p><strong> Version 1.8 </strong><br />
   <strong> Languages:</strong> English</p>
   <p><strong>Author: <a href="http://forums.gibberlings3.net/index.php?showuser=6306">The Subtle Doctor</a></strong></p>
   <p><strong><a href="https://github.com/subtledoctor/SubtleD_Stat_Overhauls">Home page</a></strong></p>
@@ -571,7 +571,7 @@
   <div class="section">
     <p><strong><em>Ability Score-Based Bonus Spells</em></strong></p>
       <p>This component gives you bonus spell memorization slots for having high stats. Clerics and druids already get this in the unmodded game; now similar bonuses are applied to mages (based on INT), bards (based on CHA*), and sorcerers and shamans (based on CHA). (* Note, if you have installed Might & Guile's 'Revised Bards,' those multiclass bards will use INT as their casting stat.) If you have installed the option for priests to cast spells spontaneously from Faiths & Powers, that mechanism will be affecte by these bonuses as well.</p>
-      <p>Additionally, these bonuses have been mde more uniform - including the unmodded cleric and druid bonuses:</p>
+      <p>Additionally, these bonuses have been made more uniform - including the unmodded cleric and druid bonuses:</p>
 <table style= "width: 50%">
  <tr>
   <th>STAT </th>
@@ -859,6 +859,13 @@
     <p><strong><em>SBO: Full Strength from 2-Hand Weapons Only</em></strong></p>
       <p>This small component simply adds a -1 STR penalty to every 1-handed weapon.  The idea behind it is, your "STR" score measures your total bodily strength. If you attempt a feat of strength one-handed, naturally the result will not be as effective as if you used both arms. </p>
       <p>Note: this penalty stacks, so you will have a -2 penalty when dual-wielding. That weapon style is all about speed - not power! </p>
+  </div>
+  <h4 class="subheader">Component 140: </h4>
+  <div class="section">
+    <p><strong><em>SBO: Plinkification</em></strong></p>
+      <p>This small component, currently in beta (!), was inspired by seeing that my party members tend to do much more damage in melee than even similarly-equipped and similarly-leveled opponents. My team members just stacked more outright damage bonuses in ways that enemies cannot match. So this component broadly reduces damage output from all weapon attacks - in ways that will likely affect the player more than the AI.</p>
+      <p>First, it adopts a 5E-inspired "bounded accuracy" approach to attacks... which basically means it slows down thac0 progression for all classes. Then, it shifts some of the melee damage bonuses available to the player to instead give greater thac0 bonuses. STR-based damage bonuses are roughly cut in half, to a max of +7 at 25 STR. Likewise, the bonuses from weapon specialization and mastery are again shifted away from damage (bonuses cut to about 2/3) and toward accuracy (greater thac0 bonuses). Finally, all enchanted weapons will have their basic enchantment bonuses <b>only</b> affect thac0 - they will have no damage bonus at all. (Any extra elemental damage done by weapons is untouched, which means these weapons are relatively more powerful). The intended result of all this should be PCs doing similar damage to their opponents, and relying instead on tactics to win.</p>
+      <p><b>NOTE:</b> this component is in need of serious playtesting to make sure the adjustments are fine-tuned just right.</p>
   </div>
   <h4 class="subheader">Component 150: </h4>
   <div class="section">

@@ -9,7 +9,7 @@
 <body>
 <h1>Subtle Mods: SubtleD's Stat Overhauls (Stats of Balance)</h1>
 <div class="section">
-  <p><strong> Version 1.0 </strong><br />
+  <p><strong> Version 1.8 </strong><br />
   <strong> Languages:</strong> English</p>
   <p><strong>Author: <a href="http://forums.gibberlings3.net/index.php?showuser=6306">The Subtle Doctor</a></strong></p>
   <p><strong><a href="https://github.com/subtledoctor/SubtleD_Stat_Overhauls">Home page</a></strong></p>
@@ -198,7 +198,7 @@
   <td>+3</td>
  </tr>
 </table>
-
+<i>Note: the 18/xx "exceptional" Strength doesn't work in BG like it does in PnP; ALL bonuses are supposed to go up that table in steps (including for non-warriors). BG makes it so that the 1-point jump from 18 to 19 is a bigger difference than the <strong>5-point</strong> jump from 13 to 18. I fix that by, essentially, collapsing the 18/xx values to all be about the same. Bonuses are pushed downward, so there is now almost the same difference between 14 and 15 as there is between 18 and 19.</i><br />
 <table style= "width: 60%">
  <tr>
   <th>INTELLIGENCE</th>
@@ -306,7 +306,7 @@
   <td>+1, +1 per 5 levels</td>
  </tr>
 </table>
-* <i>(Warriors only. <b>NOTE:</b> these extra proficiencies can be turned off by editing a variable in /Scales_of_Balance/ini/stats.ini.)</i><br />
+* <i>(Warriors only. <b>NOTE:</b> these extra proficiencies can be turned off by editing a variable in /SubtleD_Stat_Overhauls/ini/stats.ini.)</i><br />
 <table style= "width: 50%">
  <tr>
   <th>WISDOM </th>
@@ -564,14 +564,14 @@
   <td>+20%</td>
  </tr>
 </table>
+* <i>(<b>NOTE:</b> the XP bonuses are off by default, to maximize compatibility with other mods that may use the XP boost opcode. To turn this on, you can edit the variable in /SubtleD_Stat_Overhauls/ini/stats.ini.)</i><br />
     </div>
-      <p>Note: the 18/xx "exceptional" Strength doesn't work in BG like it does in PnP; ALL bonuses are supposed to go up that table in steps (including for non-warriors). BG makes it so that the 1-point jump from 18 to 19 is a bigger difference than the <strong>5-point</strong> jump from 13 to 18. I fix that by, essentially, collapsing the 18/xx values to all be about the same. Bonuses are pushed downward, so there is now almost the same difference between 14 and 15 as there is between 18 and 19.</p>
   </div>
   <h4 class="subheader">Component 110 (for EE 2.0+): </h4>
   <div class="section">
     <p><strong><em>Ability Score-Based Bonus Spells</em></strong></p>
       <p>This component gives you bonus spell memorization slots for having high stats. Clerics and druids already get this in the unmodded game; now similar bonuses are applied to mages (based on INT), bards (based on CHA*), and sorcerers and shamans (based on CHA). (* Note, if you have installed Might & Guile's 'Revised Bards,' those multiclass bards will use INT as their casting stat.) If you have installed the option for priests to cast spells spontaneously from Faiths & Powers, that mechanism will be affecte by these bonuses as well.</p>
-      <p>Additionally, these bonuses have been mde more uniform - including the unmodded cleric and druid bonuses:</p>
+      <p>Additionally, these bonuses have been made more uniform - including the unmodded cleric and druid bonuses:</p>
 <table style= "width: 50%">
  <tr>
   <th>STAT </th>
@@ -860,6 +860,13 @@
       <p>This small component simply adds a -1 STR penalty to every 1-handed weapon.  The idea behind it is, your "STR" score measures your total bodily strength. If you attempt a feat of strength one-handed, naturally the result will not be as effective as if you used both arms. </p>
       <p>Note: this penalty stacks, so you will have a -2 penalty when dual-wielding. That weapon style is all about speed - not power! </p>
   </div>
+  <h4 class="subheader">Component 140: </h4>
+  <div class="section">
+    <p><strong><em>SBO: Plinkification</em></strong></p>
+      <p>This small component, currently in beta (!), was inspired by seeing that my party members tend to do much more damage in melee than even similarly-equipped and similarly-leveled opponents. My team members just stacked more outright damage bonuses in ways that enemies cannot match. So this component broadly reduces damage output from all weapon attacks - in ways that will likely affect the player more than the AI.</p>
+      <p>First, it adopts a 5E-inspired "bounded accuracy" approach to attacks... which basically means it slows down thac0 progression for all classes. Then, it shifts some of the melee damage bonuses available to the player to instead give greater thac0 bonuses. STR-based damage bonuses are roughly cut in half, to a max of +7 at 25 STR. Likewise, the bonuses from weapon specialization and mastery are again shifted away from damage (bonuses cut to about 2/3) and toward accuracy (greater thac0 bonuses). Finally, all enchanted weapons will have their basic enchantment bonuses <b>only</b> affect thac0 - they will have no damage bonus at all. (Any extra elemental damage done by weapons is untouched, which means these weapons are relatively more powerful). The intended result of all this should be PCs doing similar damage to their opponents, and relying instead on tactics to win.</p>
+      <p><b>NOTE:</b> this component is in need of serious playtesting to make sure the adjustments are fine-tuned just right.</p>
+  </div>
   <h4 class="subheader">Component 150: </h4>
   <div class="section">
     <p><strong><em>Hit Dice Overhaul (HDO): Revised Hit Point Progression</em></strong></p>
@@ -891,6 +898,11 @@
       <li>Saving throws vs. Rod/Staff/Wands are basically unused.</li>
     </ul></p> 
     <p>Additionally, saving throw tables are made more sensible.  No earth-shaking changes, just sensible progression: wizards save well against spells, priests save well against death, rogues save well against breath, and warriors save well against almost everything.</p>
+  </div>
+  <h4 class="subheader">Component 180: </h4>
+  <div class="section">
+    <p><strong><em>Lower Dual-Class requirements (DCR)</em></strong></p>
+    <p>This very quick and simple component sets all stat requirements to 15 to dual-class <i>from</i> a given class and <i>to</i> a given class - instead of some requirements being 15 and others being 17. This will make it much easier to dual-class, it makes things easier and is just a convenience tweak to the AD&D 2E ruleset.</p> 
   </div>
   <h4 class="subheader">Component 200: </h4>
   <div class="section">
