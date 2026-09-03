@@ -49,8 +49,8 @@ ACTION_PHP_EACH JOINABLE_NPC_ARRAY AS cre => dv BEGIN
         PATCH_IF (maxhp > 1) AND (maxhp < 42) BEGIN
           WRITE_SHORT 0x24 (maxhp + 4)
         END
-//        LPF ADD_CRE_EFFECT INT_VAR opcode=17 target=1 timing=1 power=1 paramater1=4 parameter2=0 END
-//        LPF ADD_CRE_EFFECT INT_VAR opcode=18 target=1 timing=9 power=1 paramater1=4 parameter2=0 END
+//        LPF ADD_CRE_EFFECT INT_VAR opcode=17 target=1 timing=1 power=1 parameter1=4 parameter2=0 END
+//        LPF ADD_CRE_EFFECT INT_VAR opcode=18 target=1 timing=9 power=1 parameter1=4 parameter2=0 END
     END
   BUT_ONLY
 END
@@ -68,8 +68,8 @@ ACTION_PHP_EACH NON_JOINABLE_NPC_ARRAY AS cre => dv BEGIN
         PATCH_IF (maxhp > 1) AND (maxhp < 25) BEGIN
           WRITE_SHORT 0x24 (maxhp + 5)
         END
-//        LPF ADD_CRE_EFFECT INT_VAR opcode=17 target=1 timing=1 power=1 paramater1=4 parameter2=0 END
-//        LPF ADD_CRE_EFFECT INT_VAR opcode=18 target=1 timing=9 power=1 paramater1=4 parameter2=0 END        
+//        LPF ADD_CRE_EFFECT INT_VAR opcode=17 target=1 timing=1 power=1 parameter1=4 parameter2=0 END
+//        LPF ADD_CRE_EFFECT INT_VAR opcode=18 target=1 timing=9 power=1 parameter1=4 parameter2=0 END        
       END
     END
   BUT_ONLY

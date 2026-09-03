@@ -254,6 +254,7 @@ ACTION_IF (change_INT > 0) BEGIN
   COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5int10.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5int10~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 37 parameter1 = (0 - 1) parameter2 = 0 target = 1 timing = 0 duration = 7 END
+/* the feck was this about?
   ACTION_IF NOT FILE_EXISTS_IN_GAME ~qdtnb_attrbon.qd~ BEGIN
    COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5int12.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5int12~ END
@@ -265,6 +266,7 @@ ACTION_IF (change_INT > 0) BEGIN
    COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5int14.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5int14~ END
   END
+*/
   COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5int15.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5int15~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 37 parameter1 = 1 parameter2 = 0 target = 1 timing = 0 duration = 7 END

@@ -39,8 +39,8 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.cre$~ ~override~
 	PATCH_IF (SOURCE_SIZE > 0x2d3) BEGIN
 		READ_LONG 0x1cc biography
 		PATCH_IF (biography > 0 && biography < 2147483647) BEGIN // party-joinable NPC
-			LPF ADD_CRE_EFFECT INT_VAR opcode=17 target=1 timing=1 power=1 paramater1=4 parameter2=0 END
-			LPF ADD_CRE_EFFECT INT_VAR opcode=18 target=1 timing=9 power=1 paramater1=4 parameter2=0 END
+			LPF ADD_CRE_EFFECT INT_VAR opcode=17 target=1 timing=1 power=1 parameter1=4 parameter2=0 END
+			LPF ADD_CRE_EFFECT INT_VAR opcode=18 target=1 timing=9 power=1 parameter1=4 parameter2=0 END
 		END
 	END
 BUT_ONLY
