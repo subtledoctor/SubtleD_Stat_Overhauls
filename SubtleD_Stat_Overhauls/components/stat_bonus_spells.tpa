@@ -164,16 +164,12 @@ END
 //COPY ~%MOD_FOLDER%/data/ability_bonuses/d5_slot1.spl~ ~override/d5absp1.spl~
 COPY ~%MOD_FOLDER%/lib/d5_base.spl~ ~override/d5absp1.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 target = 1 timing = 9 STR_VAR resource = ~d5absp1~ END
+	LPF ADD_SPELL_EFFECT INT_VAR opcode = 177 target = 1 parameter1 = 19 parameter2 = 5 timing = 9 STR_VAR resource = ~d5absps~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 177 target = 1 parameter1 = 0 parameter2 = 2 timing = 9 STR_VAR resource = ~d5abspw~ END
-	LPF ADD_SPELL_EFFECT INT_VAR insert_point = 0 opcode = 318 target = 1 parameter1 = 19 parameter2 = 105 timing = 0 duration = 1 STR_VAR resource = ~d5absp1~ END
 //COPY ~%MOD_FOLDER%/data/ability_bonuses/d5_slot1.spl~ ~override/d5absp2.spl~
 COPY ~%MOD_FOLDER%/lib/d5_base.spl~ ~override/d5absp2.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 target = 1 timing = 9 STR_VAR resource = ~d5absp2~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 177 target = 1 parameter1 = 5 parameter2 = 5 timing = 9 STR_VAR resource = ~d5abspb~ END
-//COPY ~%MOD_FOLDER%/data/ability_bonuses/d5_slot1.spl~ ~override/d5absp3.spl~
-COPY ~%MOD_FOLDER%/lib/d5_base.spl~ ~override/d5absp3.spl~
-	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 target = 1 timing = 9 STR_VAR resource = ~d5absp3~ END
-	LPF ADD_SPELL_EFFECT INT_VAR opcode = 177 target = 1 parameter1 = 19 parameter2 = 5 timing = 9 STR_VAR resource = ~d5absps~ END
 
 COPY ~%MOD_FOLDER%/data/ability_bonuses/d5_slots.eff~ ~override/d5abspw.eff~
 	WRITE_ASCII 0x30 ~d5abspw~ #8
@@ -215,6 +211,8 @@ COPY ~%MOD_FOLDER%/data/ability_bonuses/d5_slots.spl~ ~override/d5abspb.spl~ 	//
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 parameter1 = 24 parameter2 = %chr_slots% target = 1 timing = 1 STR_VAR resource = ~d5chrbx~ END
 //	LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 parameter1 = 25 parameter2 = %chr_slots% target = 1 timing = 1 STR_VAR resource = ~d5chrby~ END
 COPY ~%MOD_FOLDER%/data/ability_bonuses/d5_slots.spl~ ~override/d5absps.spl~ 	// 	spell slot modifications for sorcerers
+  LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 target = 1 timing = 9 STR_VAR resource = ~d5abspw~ END
+  LPF ADD_SPELL_EFFECT INT_VAR insert_point = 0 opcode = 318 target = 1 parameter1 = 19 parameter2 = 105 timing = 0 duration = 1 STR_VAR resource = ~d5abspw~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 parameter1 = 13 parameter2 = 133 target = 1 timing = 1 STR_VAR resource = ~d5chrsl~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 parameter1 = 13 parameter2 = %chr_slots% target = 1 timing = 1 STR_VAR resource = ~d5chrsm~ END
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 326 parameter1 = 14 parameter2 = %chr_slots% target = 1 timing = 1 STR_VAR resource = ~d5chrsn~ END
@@ -406,9 +404,10 @@ COPY ~%MOD_FOLDER%/data/ability_bonuses/d5_slots.spl~ ~override/d5absps.spl~ 	//
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 191 parameter1 = 4 parameter2 = 0 target = 1 timing = 0 duration = 7 END
 
 
-// 		only sorcerer bonuses - wild mage is in kitlist so will add wizard bonuses below
+// 		sorcerer and generalist mage bonuses - wildmage might or might not be clabma01 in kitlist.2da (depending on other mods installed)
 ACTION_IF FILE_EXISTS_IN_GAME ~clabma01.2da~ BEGIN
-	APPEND ~clabma01.2da~ ~XTRA_SPL    AP_D5ABSP3  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+//	APPEND ~clabma01.2da~ ~XTRA_SPL    AP_D5ABSP3  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+	APPEND ~clabma01.2da~ ~XTRA_SPL    AP_D5ABSP1  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
 END
 	 
 ACTION_IF FILE_EXISTS_IN_GAME ~clabba01.2da~ BEGIN
@@ -442,7 +441,7 @@ COPY_EXISTING ~kitlist.2da~ ~override~
 	READ_2DA_ENTRY %row% 5 10 modclab
 	READ_2DA_ENTRY %row% 8 10 modclass
     PATCH_IF (FILE_EXISTS_IN_GAME ~%modclab%.2da~) BEGIN
-	  PATCH_IF (%modclass% = 1) AND !(~%modname%~ STRING_MATCHES_REGEXP ~C0SA+~ = 0) AND !(~%modclab%~ STRING_EQUAL_CASE ~D5ACNST~) AND !(~%modclab%~ STRING_EQUAL_CASE ~D5_MANA~) BEGIN	// mage kits
+	  PATCH_IF (%modclass% = 1 AND !(~%modclab%~ STRING_EQUAL_CASE ~CLABMA01~)) AND !(~%modname%~ STRING_MATCHES_REGEXP ~C0SA+~ = 0) AND !(~%modclab%~ STRING_EQUAL_CASE ~D5ACNST~) AND !(~%modclab%~ STRING_EQUAL_CASE ~D5_MANA~) BEGIN	// mage kits, excluding clabma01
 	    INNER_ACTION BEGIN
 		  APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ABSP1  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
 	    END
@@ -454,10 +453,10 @@ COPY_EXISTING ~kitlist.2da~ ~override~
 	  END
 	  PATCH_IF (%modclass% = 19) AND !(~%modname%~ STRING_MATCHES_REGEXP ~C0SA+~ = 0) BEGIN 	// sorcerer kits
 	    INNER_ACTION BEGIN
-		  APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ABSP3  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
+		  APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ABSP1  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~
 	    END
 	  END
-	  PATCH_IF (%modclass% = 1) OR (%modclass% = 5) OR (%modclass% = 19) OR (%modclass% = 7) OR (%modclass% = 10) OR (%modclass% = 13) OR (%modclass% = 14) OR (%modclass% = 17) BEGIN
+	  PATCH_IF (%modclass% = 1 AND !(~%modclab%~ STRING_EQUAL_CASE ~CLABMA01~)) OR (%modclass% = 5) OR (%modclass% = 19) OR (%modclass% = 7) OR (%modclass% = 10) OR (%modclass% = 13) OR (%modclass% = 14) OR (%modclass% = 17) BEGIN
 	    PATCH_IF (~%modname%~ STRING_MATCHES_REGEXP ~C0SA+~ = 0) BEGIN	// shadow adept arcane kits
 		  INNER_ACTION BEGIN
 		    APPEND ~%modclab%.2da~ ~XTRA_SPL    AP_D5ZISLT  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  ~

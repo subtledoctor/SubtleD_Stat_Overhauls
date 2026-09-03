@@ -257,9 +257,6 @@ ACTION_IF (change_INT > 0) BEGIN
   ACTION_IF NOT FILE_EXISTS_IN_GAME ~qdtnb_attrbon.qd~ BEGIN
    COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5int12.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5int12~ END
-	PATCH_IF NOT FILE_EXISTS_IN_GAME ~qdtnb_attrbon.qd~ BEGIN
-	  LPF ADD_SPELL_EFFECT INT_VAR opcode = 42 parameter1 = (0 - 1) parameter2 = 511 target = 1 timing = 0 duration = 7 END
-	END
    COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5int13.spl~
 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 parameter2 = 0 target = 1 timing = 1 STR_VAR resource = ~d5int13~ END
    COPY ~%MOD_FOLDER%/data/stats/d5_statx.spl~ ~override/d5int14.spl~
@@ -622,11 +619,17 @@ ACTION_IF (change_CHA > 0) BEGIN
 END
 //__________________________________________________________________________________
 
+//Define undefined mage clabs
+//
+ACTION_FOR_EACH kitclab IN ~CLABMA01~ ~CLABMA02~ ~CLABMA03~ ~CLABMA04~ ~CLABMA05~ ~CLABMA06~ ~CLABMA07~ ~CLABMA08~ ~CLABMA09~ BEGIN 
+	ACTION_IF !(FILE_EXISTS_IN_GAME ~%kitclab%.2DA~) THEN BEGIN
+		COPY ~%MOD_FOLDER%/data/stats/BLANKCLAB.2da~ ~override/%kitclab%.2da~ // generate undefined clab files
+	END 
+END
 
 //ADD STAT BONUS EFFECT TO EVERY CLAB_______________________________________________
-//
-// no need for clabma01 because it is in kitlist.2da
-ACTION_FOR_EACH trueclass IN ~clabba01~ ~clabdr01~ ~clabfi01~ /*~clabma01~*/ ~clabmo01~ ~clabpa01~ ~clabpr01~ ~clabrn01~ ~clabsh01~ ~clabth01~ BEGIN
+// bonuses for base classes, clabma01 included, because it might or might not be present in kitlist.2da (depending on other mods installed)
+ACTION_FOR_EACH trueclass IN ~clabba01~ ~clabdr01~ ~clabfi01~ ~clabma01~ ~clabmo01~ ~clabpa01~ ~clabpr01~ ~clabrn01~ ~clabsh01~ ~clabth01~ BEGIN
   ACTION_IF (FILE_EXISTS_IN_GAME ~%trueclass%.2da~) BEGIN
     APPEND ~%trueclass%.2da~ ~ABILITY     AP_D5_STAT1 ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        **** ~ UNLESS ~AP_D5_STAT1~
   END
@@ -636,7 +639,7 @@ COPY_EXISTING ~kitlist.2da~ ~override~
   FOR ( index = 2 ; index < rows ; index = index + 1 ) BEGIN
     READ_2DA_ENTRY %index% 5 9 modclab
     READ_2DA_ENTRY %index% 8 9 modclass
-    PATCH_IF (modclass = 1) OR (modclass = 2) OR (modclass = 3) OR (modclass = 4) OR (modclass = 5) OR (modclass = 6) OR (modclass = 11) OR (modclass = 12) OR (modclass = 19) OR (modclass = 20) OR (modclass = 21) BEGIN
+    PATCH_IF (modclass = 1 AND !(~%modclab%~ STRING_EQUAL_CASE ~CLABMA01~)) OR (modclass = 2) OR (modclass = 3) OR (modclass = 4) OR (modclass = 5) OR (modclass = 6) OR (modclass = 11) OR (modclass = 12) OR (modclass = 19) OR (modclass = 20) OR (modclass = 21) BEGIN
       INNER_ACTION BEGIN
         ACTION_IF (FILE_EXISTS_IN_GAME ~%modclab%.2da~) BEGIN
           APPEND ~%modclab%.2da~ ~ABILITY     AP_D5_STAT1 ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        **** ~ UNLESS ~AP_D5_STAT1~
