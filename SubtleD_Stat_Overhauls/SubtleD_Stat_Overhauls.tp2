@@ -1,7 +1,7 @@
 BACKUP ~weidu_external/backup/SubtleD_Stat_Overhauls~
 AUTHOR ~SubtleD~
 
-VERSION ~v1.8.1~
+VERSION ~v1.8.2~
 
 ALWAYS
 
@@ -73,6 +73,7 @@ LANGUAGE
   ~Simplified Chinese~
   ~schinese~
   ~SubtleD_Stat_Overhauls/lang/zh_CN/setup.tra~
+
 //__________________________________________________________________________________
 //__________________________________________________________________________________
 //
@@ -158,6 +159,7 @@ ACTION_IF (MOD_IS_INSTALLED ~SubtleD_Stat_Overhauls.tp2~ ~110~) BEGIN
     END
     ACTION_IF (FILE_EXISTS_IN_GAME ~d5__5E_casting_divine.d5~) BEGIN
       OUTER_SET 5e_wis_bonus_memorization = 0
+      OUTER_SET 5e_wis_bonus_casting = 1
       LAM semi_wis_slots
     END
   END
@@ -174,7 +176,7 @@ ACTION_IF !(MOD_IS_INSTALLED ~SubtleD_Stat_Overhauls.tp2~ ~110~) BEGIN
       OUTER_SET 5e_wis_bonus_casting = 1
       LAM semi_wis_slots
     END
-    COPY ~%MOD_FOLDER%/stats/mxsplwis_0.2da~ ~override/mxsplwis.2da~
+    COPY ~%MOD_FOLDER%/data/stats/mxsplwis_0.2da~ ~override/mxsplwis.2da~
   END
 END
 //__________________________________________________________________________________
